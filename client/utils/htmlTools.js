@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 //返回顶部
 export function goTop() {
   /*(function smoothscroll(){  

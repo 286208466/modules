@@ -3,7 +3,7 @@ export function filteremoji(content) {
   var ranges = [
     "\ud83c[\udf00-\udfff]",
     "\ud83d[\udc00-\ude4f]",
-    "\ud83d[\ude80-\udeff]"
+    "\ud83d[\ude80-\udeff]",
   ];
   var emojireg = content.replace(new RegExp(ranges.join("|"), "g"), "");
   return emojireg;
@@ -58,16 +58,6 @@ export function escape(str) {
 export function trim(str) {
   str = typeof str === "string" ? str : "";
   return str.trim ? str.trim() : str.replace(/^\s|\s$/g, "");
-}
-
-//是否是微信客户端
-export function isWx() {
-  var ua = navigator.userAgent.toLowerCase();
-  if (ua.match(/MicroMessenger/i) == "micromessenger") {
-    return true;
-  } else {
-    return false;
-  }
 }
 
 //获取IE版本
@@ -130,18 +120,17 @@ export function getUrlParam(name) {
 
 //iframe下载文件
 export function download(filepath) {
-    var iframe = document.getElementById("downloadframe");
-    if (iframe) {
-      iframe.src = filepath;
-    } else {
-      iframe = document.createElement("iframe");
-      iframe.src = filepath;
-      iframe.style.display = "none";
-      iframe.id = "downloadframe";
-      document.body.appendChild(iframe);
-    }
+  var iframe = document.getElementById("downloadframe");
+  if (iframe) {
+    iframe.src = filepath;
+  } else {
+    iframe = document.createElement("iframe");
+    iframe.src = filepath;
+    iframe.style.display = "none";
+    iframe.id = "downloadframe";
+    document.body.appendChild(iframe);
   }
-  
+}
 
 /*
 -------------------------------------------------------
