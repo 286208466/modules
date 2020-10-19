@@ -1,0 +1,73 @@
+/*
+    浮动相关
+*/
+.clearfix:after {
+  clear: both;
+  content: "";
+  display: block;
+  height: 0;
+}
+.clearfix {
+  *zoom: 1;
+}
+/*
+.clearfix::after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: "";
+  clear: both;
+  height: 0;
+}
+*/
+.fr {
+  float: right !important;
+}
+.fl {
+  float: left !important;
+}
+/*
+    文本相关
+*/
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.tr {
+  text-align: right !important;
+}
+.tc {
+  text-align: center !important;
+}
+.tl {
+  text-align: left !important;
+}
+/*
+    隐藏
+*/
+.hide {
+  display: none !important;
+}
+[hidden] {
+  display: none !important;
+}
+.inlineBlock {
+  display: inline-block;
+  vertical-align: middle;
+}
+/*
+    flex
+*/
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flexItem {
+  flex: 1;
+}
+i[class^="icon-"] {
+  display: inline-block;
+  vertical-align: middle;
+}

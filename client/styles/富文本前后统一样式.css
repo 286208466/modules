@@ -1,0 +1,153 @@
+.content-details .content-text {
+  width: 720px;
+  overflow: hidden;
+  font-size: 16px;
+  font-family: "Helvetica Neue", Helvetica, "Lucida Grande", "Luxi Sans", Arial,
+    "PingFang SC", "Hiragino Sans GB", STHeiti, "Microsoft YaHei",
+    "Wenquanyi Micro Hei", "WenQuanYi Micro Hei Mono", "WenQuanYi Zen Hei",
+    "WenQuanYi Zen Hei Mono", LiGothicMed;
+  line-height: 2;
+  color: #3a3a3a;
+}
+.content-details .content-text a {
+  color: #65a6ff;
+}
+.content-details .content-text a:hover {
+  color: #3087fe;
+}
+.content-details .content-text code {
+  font-family: consolas, Menlo, "PingFang SC", "Microsoft YaHei", monospace;
+  padding: 2px 4px;
+  word-break: break-all;
+  background: #e7e7e7;
+  margin: 0 2px;
+  border-radius: 4px;
+}
+.content-details .content-text h5,
+.content-details .content-text h6,
+.content-details .content-text ol,
+.content-details .content-text p,
+.content-details .content-text ul {
+  margin-bottom: 1.4em;
+}
+.content-details .content-text h1,
+.content-details .content-text h2,
+.content-details .content-text h3,
+.content-details .content-text h4 {
+  margin: 1.2em 0 1em;
+}
+.content-details .content-text h1 {
+  font-size: 1.8em;
+}
+.content-details .content-text h2 {
+  font-size: 1.6em;
+}
+.content-details .content-text h3 {
+  font-size: 1.4em;
+}
+.content-details .content-text h4 {
+  font-size: 1.2em;
+}
+.content-details .content-text h5,
+.content-details .content-text h6 {
+  font-size: 1em;
+}
+.content-details .content-text p img {
+  display: block;
+}
+.content-details .content-text ol,
+.content-details .content-text ul {
+  padding-left: 2em;
+}
+.content-details .content-text ul li {
+  list-style: disc;
+}
+.content-details .content-text ol li {
+  list-style: decimal;
+}
+.content-details .content-text li {
+  margin: 0.5em 0;
+}
+.content-details .content-text blockquote {
+  display: block;
+  background: #f2f2f4;
+  padding: 1em;
+  border-left: 5px solid #c1c1c1;
+  margin-bottom: 1.4em;
+}
+.content-details .content-text blockquote p:first-child {
+  margin-top: 0;
+}
+.content-details .content-text blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/*
+    UE编辑器内容样式,与UE的iframe.css保持一致
+*/
+.ueditor-view {
+  cursor: text;
+  overflow-wrap: break-word;
+  padding: 0;
+  font: normal 16px "Microsoft Yahei", Tahoma, Verdana, Arial, Helvetica,
+    sans-serif;
+}
+.ueditor-view img {
+  max-width: 100%;
+}
+.ueditor-view p {
+  font-size: 16px;
+  line-height: 26px;
+  margin: 5px 0;
+}
+.ueditor-view h1,
+.ueditor-view h2,
+.ueditor-view h3,
+.ueditor-view h4,
+.ueditor-view h5,
+.ueditor-view h6 {
+  margin: 20px 0;
+}
+.ueditor-view a[href] {
+  color: #00bff3;
+}
+.ueditor-view h6 {
+  font-size: 12px;
+}
+.ueditor-view h5 {
+  font-size: 14px;
+}
+.ueditor-view h4 {
+  font-size: 16px;
+}
+.ueditor-view h3 {
+  font-size: 18px;
+}
+.ueditor-view h2 {
+  font-size: 20px;
+}
+.ueditor-view h1 {
+  font-size: 24px;
+}
+.ueditor-view ul,
+.ueditor-view ol {
+  padding-left: 48px;
+  list-style: disc;
+}
+.ueditor-view table {
+  border-collapse: collapse;
+  display: table;
+  margin-bottom: 10px;
+}
+.ueditor-view table tr.firstRow th {
+  border-top-width: 2px;
+}
+.ueditor-view th {
+  background-color: #f7f7f7;
+  border-top: 1px solid #bbb;
+}
+.ueditor-view td,
+.ueditor-view th {
+  border: 1px solid #ddd;
+  padding: 5px 10px;
+}

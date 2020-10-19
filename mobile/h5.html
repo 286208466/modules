@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<meta name="renderer" content="webkit">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<title></title>
+<style>
+/* @font-face {
+	font-family: "myfont";
+	src: url("./src/file/myfont.ttf");
+} */
+</style>
+<link rel="stylesheet" type="text/css" href="h5-normalize.css"/>
+<link rel="stylesheet" type="text/css" href="common.css"/>
+<link rel="stylesheet" type="text/css" href="h5.css"/>
+</head>
+<body>
+
+	
+	
+<script type="text/javascript" src="./dist/spring.js"></script>
+<!-- 分享 -->
+<script type="text/javascript" src="//res.wx.qq.com/open/js/jweixin-1.2.0.js" charset="utf-8"></script>
+
+<script>
+var _url = window.location.href;
+var _appId = "wx2ce7c00a07eb7a7a";
+var _secret = "94a514227f0f4fba5cc7671ad36c76fb";
+$.ajax({
+	url: "https://www.71chat.com/scsf/core/activity.signature.do",
+	type: "get",
+	data: {
+		"url": _url,
+		"appId": _appId,
+		"secret": _secret
+	},
+	dataType: "jsonp",
+	success: function(data){
+		if(data.errorCode == "0"){
+			_timestamp = data.data.timestamp;
+			_nonceStr = data.data.nonceStr;
+			_signature = data.data.signature;
+			
+			wx.config({
+				//debug: true, 
+				// 必填，公众号的唯一标识
+			    appId: _appId,
+			 	// 必填，生成签名的时间戳
+			    timestamp: _timestamp,
+				// 必填，生成签名的随机串
+			    nonceStr: _nonceStr,
+			 	// 必填，签名，见附录1
+			    signature: _signature,
+			 	// 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+			    jsApiList: [
+					'checkJsApi',
+					'onMenuShareTimeline',
+					'onMenuShareAppMessage',
+					'onMenuShareQQ',
+					'onMenuShareWeibo',
+					'onMenuShareQZone',
+					'hideMenuItems',
+					'showMenuItems',
+					'hideAllNonBaseMenuItem',
+					'showAllNonBaseMenuItem',
+					'translateVoice',
+					'startRecord',
+					'stopRecord',
+					'onVoiceRecordEnd',
+					'playVoice',
+					'onVoicePlayEnd',
+					'pauseVoice',
+					'stopVoice',
+					'uploadVoice',
+					'downloadVoice',
+					'chooseImage',
+					'previewImage',
+					'uploadImage',
+					'downloadImage',
+					'getNetworkType',
+					'openLocation',
+					'getLocation',
+					'hideOptionMenu',
+					'showOptionMenu',
+					'closeWindow',
+					'scanQRCode',
+					'chooseWXPay',
+					'openProductSpecificView',
+					'addCard',
+					'chooseCard',
+					'openCard'
+			    ]
+			});
+			wx.ready(function(){
+				
+				var title = "前任？抢票？过年攻略！";
+				var link = "https://" + location.hostname + "/h5/spring.html";
+				var desc = "满怀期待地回家，迫不及待地挡枪";
+				var imgUrl = "https://" + location.hostname + "/h5/src/img/spring/wx.jpg";
+				
+				//监听“分享给朋友”，按钮点击、自定义分享内容及分享结果接口
+				wx.onMenuShareAppMessage({
+					title: title,
+					desc: desc,
+					link: link,
+					imgUrl: imgUrl,
+					type: "link",
+					dataUrl: "",
+					success: function (res) {
+						shareSuccessCallback();
+					},
+					cancel: function (res) {
+					  
+					},
+					fail: function (res) {
+					  console.log(JSON.stringify(res));
+					}
+				});
+				
+				// 监听“分享到朋友圈”按钮点击、自定义分享内容及分享结果接口
+				wx.onMenuShareTimeline({
+					title: title,
+					link: link,
+					imgUrl: imgUrl,
+					success: function (res) {
+						shareSuccessCallback();
+					},
+					cancel: function (res) {
+					
+					},
+					fail: function (res) {
+						//alert(JSON.stringify(res));
+					}
+				});
+
+				// 监听“分享到QQ”按钮点击、自定义分享内容及分享结果接口
+				wx.onMenuShareQQ({
+					title: title,
+					desc:desc ,
+					link: link,
+					imgUrl: imgUrl,
+					success: function (res) {
+						shareSuccessCallback();
+					},
+					cancel: function (res) {
+					
+					},
+					fail: function (res) {
+						//alert(JSON.stringify(res));
+					}
+				});
+				  
+				//监听“分享到微博”按钮点击、自定义分享内容及分享结果接口
+				wx.onMenuShareWeibo({
+					title: title,
+					desc: desc,
+					link: link,
+					imgUrl: imgUrl,
+					success: function (res) {
+						shareSuccessCallback();
+					},
+					cancel: function (res) {
+					
+					},
+					fail: function (res) {
+						//alert(JSON.stringify(res));
+					}
+				});
+
+				// 2.5 监听“分享到QZone”按钮点击、自定义分享内容及分享接口
+				wx.onMenuShareQZone({
+					title: title,
+					desc: desc,
+					link: link,
+					imgUrl: imgUrl,
+					success: function (res) {
+						shareSuccessCallback();
+					},
+					cancel: function (res) {
+						
+					},
+					fail: function (res) {
+						//alert(JSON.stringify(res));
+					}
+				});
+				
+				
+			});
+			wx.error(function (res) {
+				console.log("微信接口调用失败，请稍后...");
+			});
+		}
+			
+	},
+	error:function(data){
+		
+	}
+});
+	
+function shareSuccessCallback(){
+	
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,277 @@
+/*
+	h5端的css重置
+	注释项可以自己的需要选择
+*/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  /*
+		禁止文字自动调整大小
+	*/
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  height: 100%;
+}
+body {
+  margin: 0;
+  line-height: 1.6;
+  height: 100%;
+  /*
+		局部滚动(仅iOS 5以上支持)
+	*/
+  -webkit-overflow-scrolling: touch;
+  /*
+		禁止横向滚动
+	*/
+  overflow-x: hidden;
+  /*
+		weui的字体设置
+		font-family: -apple-system-font,Helvetica Neue,sans-serif;
+	*/
+  font-family: "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif;
+  /*
+		禁止页面文字选择 ，此属性不继承,一般加在body上规定整个body的文字都不会自动调整
+		-webkit-user-select: none;
+		user-select:none;
+	*/
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+audio,
+progress,
+canvas,
+video {
+  display: inline-block;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+template {
+  display: none;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+/*
+	列表
+*/
+ul,
+ol,
+li,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+ol,
+ul {
+  list-style: none;
+}
+/*
+	链接
+*/
+a {
+  cursor: pointer;
+  text-decoration: none;
+  /*
+		去掉点击链接和文本框对象时默认的灰色半透明覆盖层(iOS)或者虚框(Android)
+	*/
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  background: transparent;
+  /*
+    	禁用长按页面时的弹出菜单(iOS下有效) ,img和a标签都要加
+    	-webkit-touch-callout:none; 
+    */
+}
+a:link {
+  color: #0088cc;
+}
+a:active {
+  outline: 0;
+}
+/*
+	图片
+*/
+img {
+  border: 0;
+  vertical-align: middle;
+  max-width: 100%;
+}
+/*
+	表格
+*/
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+/*
+	form表单
+*/
+input,
+select,
+textarea,
+button {
+  margin: 0;
+  outline: none;
+  /*
+    	消除输入框和按钮的原生外观，在iOS上加上这个属性才能给按钮和输入框自定义样式 
+		不同type的input使用这个属性之后表现不一。text、button无样式，radio、checkbox直接消失
+    */
+  -webkit-appearance: none;
+  font-size: 100%;
+  font-family: inherit;
+  color: inherit;
+  border-radius: 0;
+}
+textarea {
+  resize: none;
+}
+input:focus,
+textarea:focus {
+  outline: none;
+}
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+[type="checkbox"],
+[type="radio"] {
+  padding: 0;
+}
+/*
+	段落文字
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+form,
+blockquote {
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+p {
+  word-wrap: break-word;
+  word-break: break-all;
+}
+strong,
+b {
+  font-weight: bold;
+}
+em,
+i {
+  font-style: normal;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+pre {
+  overflow: auto;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+}
+/*
+	引用
+*/
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+/*
+	指示简称或缩写，比如 "WWW" 或 "NATO"。
+	The <abbr title="People's Republic of China">PRC</abbr> was founded in 1949.
+	
+abbr[title] {
+	
+}
+
+*/
+
+/*
+	标记那些对特殊术语或短语的定义。
+	
+dfn {
+	font-style: italic;
+	color: #5e6d82;
+}
+*/
+/*
+	定义带有记号的文本,在需要突出显示文本时使用
+	<p>Do not forget to buy <mark>milk</mark> today.</p>
+
+mark {
+	background: #f6f8fa; 
+	color: #177bbb;
+}
+
+*/
+/*
+	隐藏宽带运营商嵌入的广告
+*/
+body iframe {
+  display: none;
+}
+::-webkit-input-placeholder {
+  font-family: -apple-system-font, Helvetica Neue, sans-serif;
+  color: #989898;
+}

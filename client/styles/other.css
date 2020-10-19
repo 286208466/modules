@@ -1,0 +1,293 @@
+/*
+输入框样式
+.textbox {
+	border: 1px solid #ddd;
+	padding: 0 5px;
+	-webkit-transition: all 0.6s ease 0s;
+    transition: all 0.6s ease 0s;
+}
+.textbox:hover {
+	border: 1px solid #52B2FC;
+    box-shadow: 0 0 3px #52B2FC;
+}
+表格里面的输入框样式
+<td class="tdinput">
+	<input type="text">
+</td>
+.tdinput {
+	background: #FFFFC8
+}
+.tdinput input {
+	border: none;
+	background: none;
+	width: 98%;
+	margin: 0 auto;
+}
+*/
+
+/*
+	自适应正方形
+*/
+.square {
+  display: block;
+  height: 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding-bottom: 100%;
+  position: relative;
+}
+.square img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.5s ease 0s;
+  z-index: 0;
+  width: 100%;
+}
+/*
+    列表图片鼠标悬停效果
+*/
+.img-overlay {
+  background: rgba(255, 68, 0, 0.1) none repeat scroll 0 0;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  transition: all 0.5s ease 0s;
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  z-index: 2;
+}
+.img-overlay:hover {
+  opacity: 1;
+}
+.img-overlay:hover + img {
+  transform: scale(1.2);
+}
+.img-overlay > span {
+  border: 1px solid #fff;
+  font-size: 12px;
+  margin-top: -17px;
+  line-height: 32px;
+  text-decoration: none;
+  width: 82px;
+  display: block;
+  letter-spacing: 1px;
+  margin-left: -41px;
+  position: relative;
+  text-transform: uppercase;
+  top: 50%;
+  text-align: center;
+  color: #fff;
+  left: 50%;
+}
+
+/*
+	其他
+*/
+.line {
+  height: 0;
+  position: relative;
+  border-top: 1px solid #efefef;
+  font-size: 0px;
+}
+.img-circle {
+  border-radius: 50%;
+}
+.error {
+  color: #cf262c;
+}
+*[class^="btn-"] {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+}
+/*
+美化下拉框
+<div class="ui-select">
+	<select></select>
+</div>
+	
+.ui-select {
+	border: 1px solid #eee;
+	display: inline-block;
+	height: 28px;
+	vertical-align: middle;
+	overflow: hidden;
+	position: relative;
+	width: 138px;
+	background: #fafafa;
+}
+.ui-select select {
+	background: #fafafa;
+	border: none;
+	position: absolute;
+	left: -1px;
+	top: 4px;
+	width: 100%;
+	height: 18px;
+	line-height: 18px;
+	font-size: 12px;
+}
+*/
+
+/*
+按钮
+#1
+{background:#428bca;color:#fff;border:1px solid #357ebd;}
+:hover{background:#3071a9;border:1px solid #285e8e;}
+#2
+{background:#f0ad4e;color:#fff;border:1px solid #eea236;}
+:hover{background:#ec971f;border:1px solid #d58512;}
+#3
+{background:#5cb85c;color:#fff;border:1px solid #4cae4c;}
+:hover{background:#449d44;border:1px solid #398439;}
+#4
+{background:#5bc0de;color:#fff;border:1px solid #46b8da;}
+:hover{background:#31b0d5;border:1px solid #269abc;}
+#5
+{background:#d9534f;color:#fff;border:1px solid #d43f3a;}
+:hover{background:#c9302c;border:1px solid #ac2925;}
+#6
+{border:1px solid #AFAFAF;color:#fff;background:#F3F3F3;}
+:hover{background:#eee;border:1px solid #333;}
+*/
+/*
+文件上传按钮样式
+<a class="ui-upload">
+     <span>上传</span>
+     <input type="file"/>
+</a>
+.ui-upload {
+	position: relative;
+	width: 80px;
+	height: 28px;
+	overflow: hidden;
+	display: block;
+}
+.ui-upload input[type="file"] {
+	position: absolute;
+    right: 0px;
+    top: 0px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    width: 80px;
+    height: 28px;
+    overflow: hidden;
+}
+.ui-upload span {
+    float: left;
+    display: block;
+    color: #fff;
+    background: #48A8E8;
+    height: 28px;
+    line-height: 28px;
+    width: 80px;
+    text-align: center;
+    border-radius: 4px;
+}
+*/
+/*
+面板样式
+<div class="ui-panel">
+	<h2></h2>
+	<div></div>
+</div>
+.ui-panel {
+	border:1px solid #ccc;
+	background:#fff;
+	position:relative;
+}
+.ui-panel>h2 {
+	background: #F2F5F9;
+	border-bottom: 1px solid #ccc;
+	height: 30px;
+	line-height: 30px;
+	padding: 5px 10px;
+	font-weight: bold;
+	font-size: 14px;
+}
+.ui-panel>div {
+	padding: 20px;
+}
+*/
+/*
+选项卡样式
+.ui-tab {
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	height: 38px;
+	line-height: 38px;
+}
+.ui-tab li {
+	float: left;
+	width: 90px;
+	text-align: center;
+	border-right: 1px solid #ccc;
+}
+.ui-tab li.current {
+	border-top: 3px solid #20B0E0;
+	position: relative;
+	top: -1px;
+	height: 37px;
+	line-height: 37px;
+	background: #fff;
+	font-weight: bold;
+}
+*/
+/*
+表格样式
+.sheet td,.sheet th{
+	border:1px solid #ccc;
+	padding:5px;
+	word-wrap: break-word;
+	word-break: break-all;
+}
+.sheet th{
+	background: #f8f8f8;
+}
+.sheet .sheetTitle {
+	display:inline-block;
+	height:28px;
+	line-height:28px;
+	width:131px;
+	background:#f2f2f2;
+	font-weight:bold;
+	border:1px solid #ddd;
+	border-bottom:none;
+	text-align:center;
+}
+*/
+/*
+  ui-label
+*/
+.ui-label-blue,
+.ui-label-black,
+.ui-label-yellow,
+.ui-label-green,
+.ui-label-red {
+  background: #448aff;
+  padding: 0 10px;
+  line-height: 20px;
+  color: #fff;
+  border-radius: 3px;
+  display: inline-block;
+  line-height: 22px;
+  vertical-align: middle;
+}
+.ui-label-black {
+  background: #37474f;
+}
+.ui-label-yellow {
+  background: #ffb300;
+}
+.ui-label-red {
+  background: #f44336;
+}
+.ui-label-green {
+  background: #4caf50;
+}
