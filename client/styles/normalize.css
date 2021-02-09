@@ -102,6 +102,9 @@ a.link {
 a:hover {
   text-decoration: none;
 }
+a[href] {
+    color: inherit
+}
 /*
 	图片
 */
