@@ -77,6 +77,7 @@ const Loading = forwardRef(({ children, className = "", style = {} }, ref) => {
 export default Loading;
 
 /*
-  示例：
-
-  */
+示例：
+import Loading1 from "@/modules/client/react_components/datav/Loading1";
+<Loading1></Loading1>
+*/
