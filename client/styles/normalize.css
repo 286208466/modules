@@ -14,21 +14,21 @@ body {
   margin: 0;
   font-size: 14px;
   /* 方便量UI效果图距离；坏处：要写比较多的margin、padding */
-  line-height: 1;
+  /* line-height: 1; */
   /* min-width: 1200px; */
   /* overflow-x: hidden; */
-  height: 100%;
-  -moz-osx-font-smoothing: grayscale;
+  /* height: 100%; */
+  /* -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility; */
   /* font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif; */
-  color: #5e6d82;
+  /* color: #5e6d82; */
   /*
     	默认文字颜色
     	#333;
     	#8f9ea6;
   */
-  background: #f1f2f6;
+  /* background: #f1f2f6; */
   /*
     	背景色：
     	#f6f8fa;
