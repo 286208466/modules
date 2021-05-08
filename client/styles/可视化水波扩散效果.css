@@ -1,0 +1,40 @@
+/*
+<ul class="waterCircle"><li></li><li></li><li></li></ul>
+
+*/
+.waterCircle li {
+  border: 3px solid #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: #1890ff;
+  border-color: #1890ff;
+  width: 20px;
+  height: 20px;
+}
+.waterCircle li:first-child {
+  animation: circle-opacity 2s infinite;
+  animation-delay: 0.8s;
+}
+.waterCircle li:nth-child(2) {
+  animation: circle-opacity 2s infinite;
+  animation-delay: 1.2s;
+}
+.waterCircle li:nth-child(3) {
+  animation: circle-opacity 2s infinite;
+  animation-delay: 1.6s;
+}
+@keyframes circle-opacity {
+  from {
+    opacity: 1;
+    width: 20px;
+    height: 20px;
+  }
+  to {
+    opacity: 0;
+    width: 100px;
+    height: 100px;
+  }
+}
