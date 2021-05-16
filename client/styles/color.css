@@ -2,8 +2,10 @@
 	文字颜色
 */
 .red {
+  /*color: #c00*/
   /* color: #f44336; */
   color: #ff0000;
+  
 }
 .pink {
   color: #e91e63;
