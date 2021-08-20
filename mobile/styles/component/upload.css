@@ -1,0 +1,138 @@
+/*
+	文件上传组件
+<div class="cells cells_form">
+    <div class="cell">
+        <div class="cell_bd">
+            <div class="uploader">
+                <div class="uploader_hd">
+                    <p class="uploader_title">图片上传</p>
+                    <div class="uploader_info">0/2</div>
+                </div>
+                <div class="uploader_bd">
+                    <ul class="uploader_files" id="uploaderFiles">
+                        <li class="uploader_file" style="background-image:url(./images/pic_160.png)"></li>
+                        <li class="uploader_file" style="background-image:url(./images/pic_160.png)"></li>
+                        <li class="uploader_file" style="background-image:url(./images/pic_160.png)"></li>
+                        <li class="uploader_file uploader_file_status" style="background-image:url(./images/pic_160.png)">
+                            <div class="uploader_file-content">
+                                <i class="icon-warn"></i>
+                            </div>
+                        </li>
+                        <li class="uploader_file uploader_file_status" style="background-image:url(./images/pic_160.png)">
+                            <div class="uploader_file-content">50%</div>
+                        </li>
+                    </ul>
+                    <div class="uploader_input-box">
+                        <input id="uploaderInput" class="uploader_input" type="file" accept="image/*" multiple="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+*/
+.uploader_hd {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  padding-bottom: 10px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.uploader_title {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+.uploader_info {
+  color: #b2b2b2;
+}
+.uploader_bd {
+  margin-bottom: -4px;
+  margin-right: -9px;
+  overflow: hidden;
+}
+.uploader_files {
+  list-style: none;
+}
+.uploader_file {
+  float: left;
+  margin-right: 9px;
+  margin-bottom: 9px;
+  width: 79px;
+  height: 79px;
+  background: no-repeat center center;
+  background-size: cover;
+}
+.uploader_file_status {
+  position: relative;
+}
+.uploader_file_status:before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.uploader_file_status .uploader_file-content {
+  display: block;
+}
+.uploader_file-content {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+}
+.uploader_file-content .icon-warn {
+  display: inline-block;
+}
+.uploader_input-box {
+  float: left;
+  position: relative;
+  margin-right: 9px;
+  margin-bottom: 9px;
+  width: 77px;
+  height: 77px;
+  border: 1px solid #d9d9d9;
+}
+.uploader_input-box:before,
+.uploader_input-box:after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: #d9d9d9;
+}
+.uploader_input-box:before {
+  width: 2px;
+  height: 39.5px;
+}
+.uploader_input-box:after {
+  width: 39.5px;
+  height: 2px;
+}
+.uploader_input-box:active {
+  border-color: #999999;
+}
+.uploader_input-box:active:before,
+.uploader_input-box:active:after {
+  background-color: #999999;
+}
+.uploader_input {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}

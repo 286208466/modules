@@ -1,0 +1,35 @@
+/*
+	模拟页面
+*/
+.page {
+  z-index: 1020;
+  position: fixed;
+  width: 100%;
+  min-height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  /* display: none; */
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  background: #f2f4f5;
+}
+.page.show {
+  -webkit-transform: none;
+  transform: none;
+}
+.page .page-content {
+  position: absolute;
+  top: 44px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+.page .page-content > div {
+  overflow-y: auto;
+}

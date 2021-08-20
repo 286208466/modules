@@ -1,0 +1,279 @@
+/*
+<div>
+    <div class="mask animate-fade-in"></div>
+    <div class="picker animate-slide-up">
+        <div class="picker_hd">
+            <a href="javascript:;" data-action="cancel" class="picker_action">取消</a>
+            <a href="javascript:;" data-action="select" class="picker_action" id="picker-confirm">确定</a>
+        </div>
+        <div class="picker_bd">
+            <div class="picker_group">
+                <div class="picker_mask"></div>
+                <div class="picker_indicator"></div>
+                <div class="picker_content" style="transform: translate3d(0px, 34px, 0px);">
+                    <div class="picker_item">飞机票</div>
+                    <div class="picker_item">火车票</div>
+                    <div class="picker_item">的士票</div>
+                    <div class="picker_item picker_item_disabled">公交票 (disabled)</div>
+                    <div class="picker_item">其他</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+*/
+.picker {
+	position: fixed;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+	z-index: 5000;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transform: translate(0, 100%);
+	transform: translate(0, 100%);
+	-webkit-transition: -webkit-transform .3s;
+	transition: -webkit-transform .3s;
+	transition: transform .3s;
+    transition: transform .3s, -webkit-transform .3s;
+    font-size: 15px;
+}
+
+.picker_hd {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	padding: 9px 15px;
+	background-color: #fff;
+	position: relative;
+	text-align: center;
+	font-size: 17px;
+}
+
+.picker_hd:after {
+	content: " ";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	height: 1px;
+	border-bottom: 1px solid #E5E5E5;
+	color: #E5E5E5;
+	-webkit-transform-origin: 0 100%;
+	transform-origin: 0 100%;
+	-webkit-transform: scaleY(0.5);
+	transform: scaleY(0.5);
+}
+
+.picker_action {
+	display: block;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	flex: 1;
+	color: #1AAD19;
+}
+
+.picker_action:first-child {
+	text-align: left;
+	color: #888;
+}
+
+.picker_action:last-child {
+	text-align: right;
+}
+
+.picker_bd {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	position: relative;
+	background-color: #fff;
+	height: 238px;
+	overflow: hidden;
+}
+
+.picker_group {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	flex: 1;
+	position: relative;
+	height: 100%;
+}
+
+.picker_mask {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	z-index: 3;
+	background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.6)), -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.6));
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.6)), linear-gradient(0deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.6));
+	background-position: top, bottom;
+	background-size: 100% 102px;
+	background-repeat: no-repeat;
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+}
+
+.picker_indicator {
+	width: 100%;
+	height: 34px;
+	position: absolute;
+	left: 0;
+	top: 102px;
+	z-index: 3;
+}
+
+.picker_indicator:before {
+	content: " ";
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	height: 1px;
+	border-top: 1px solid #E5E5E5;
+	color: #E5E5E5;
+	-webkit-transform-origin: 0 0;
+	transform-origin: 0 0;
+	-webkit-transform: scaleY(0.5);
+	transform: scaleY(0.5);
+}
+
+.picker_indicator:after {
+	content: " ";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	height: 1px;
+	border-bottom: 1px solid #E5E5E5;
+	color: #E5E5E5;
+	-webkit-transform-origin: 0 100%;
+	transform-origin: 0 100%;
+	-webkit-transform: scaleY(0.5);
+	transform: scaleY(0.5);
+}
+
+.picker_content {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+.picker_item {
+	padding: 0;
+	height: 34px;
+	line-height: 34px;
+	text-align: center;
+	color: #000000;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.picker_item_disabled {
+	color: #808080;
+}
+
+@-webkit-keyframes slideUp {
+	from {
+		-webkit-transform: translate3d(0, 100%, 0);
+		transform: translate3d(0, 100%, 0);
+	}
+	to {
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+@keyframes slideUp {
+	from {
+		-webkit-transform: translate3d(0, 100%, 0);
+		transform: translate3d(0, 100%, 0);
+	}
+	to {
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+.animate-slide-up {
+	-webkit-animation: slideUp ease .3s forwards;
+	animation: slideUp ease .3s forwards;
+}
+
+@-webkit-keyframes slideDown {
+	from {
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+	to {
+		-webkit-transform: translate3d(0, 100%, 0);
+		transform: translate3d(0, 100%, 0);
+	}
+}
+
+@keyframes slideDown {
+	from {
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+	to {
+		-webkit-transform: translate3d(0, 100%, 0);
+		transform: translate3d(0, 100%, 0);
+	}
+}
+
+.animate-slide-down {
+	-webkit-animation: slideDown ease .3s forwards;
+	animation: slideDown ease .3s forwards;
+}
+
+@-webkit-keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.animate-fade-in {
+	-webkit-animation: fadeIn ease .3s forwards;
+	animation: fadeIn ease .3s forwards;
+}
+
+@-webkit-keyframes fadeOut {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+
+@keyframes fadeOut {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+
+.animate-fade-out {
+	-webkit-animation: fadeOut ease .3s forwards;
+	animation: fadeOut ease .3s forwards;
+}

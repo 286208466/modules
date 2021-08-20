@@ -1,0 +1,30 @@
+/*
+	weui重置
+*/
+.weui-cell:before {
+  right: 15px;
+}
+.weui-actionsheet__cell {
+  font-size: 16px;
+}
+.weui-toast {
+  font-size: 14px;
+}
+.toolbar {
+  line-height: 44px;
+}
+.toolbar .toolbar-inner {
+  height: 44px;
+}
+.toolbar .picker-button {
+  height: 44px;
+  line-height: 44px;
+  font-size: 14px;
+}
+.toolbar .title {
+  line-height: 44px;
+  font-size: 14px;
+}
+.weui-picker-modal .picker-item {
+  font-size: 14px;
+}

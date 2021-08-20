@@ -31,7 +31,7 @@ Date.prototype.format = function(format){
 }
 */
 export function format() {
-  Date.prototype.format = function(format) {
+  Date.prototype.format = function (format) {
     var o = {
       "M+": this.getMonth() + 1, //month
       "d+": this.getDate(), //day

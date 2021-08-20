@@ -26,23 +26,7 @@
 .fl {
   float: left !important;
 }
-/*
-    文本相关
-*/
-.ellipsis {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-.tr {
-  text-align: right !important;
-}
-.tc {
-  text-align: center !important;
-}
-.tl {
-  text-align: left !important;
-}
+
 /*
     隐藏
 */

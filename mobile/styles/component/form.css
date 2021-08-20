@@ -1,0 +1,449 @@
+/*
+<div class="cells_title">性別</div>
+<div class="cells cells_radio">
+    <label class="cell check_label" for="x11">
+        <div class="cell_bd">
+            <p>男</p>
+        </div>
+        <div class="cell_ft">
+            <input type="radio" class="check" name="radio1" id="x11">
+            <span class="icon-checked"></span>
+        </div>
+    </label>
+    <label class="cell check_label" for="x12">
+
+        <div class="cell_bd">
+            <p>女</p>
+        </div>
+        <div class="cell_ft">
+            <input type="radio" name="radio1" class="check" id="x12" checked="checked">
+            <span class="icon-checked"></span>
+        </div>
+    </label>
+    <a class="cell cell_link">
+        <div class="cell_bd">添加更多</div>
+    </a>
+</div>
+<div class="cells_title">复选列表项</div>
+<div class="cells cells_checkbox">
+    <label class="cell check_label" for="s11">
+        <div class="cell_hd">
+            <input type="checkbox" class="check" name="checkbox1" id="s11" checked="checked">
+            <i class="icon-checked"></i>
+        </div>
+        <div class="cell_bd">
+            <p>HTML</p>
+        </div>
+    </label>
+    <label class="cell check_label" for="s12">
+        <div class="cell_hd">
+            <input type="checkbox" name="checkbox1" class="check" id="s12">
+            <i class="icon-checked"></i>
+        </div>
+        <div class="cell_bd">
+            <p>CSS</p>
+        </div>
+    </label>
+    <a class="cell cell_link">
+        <div class="cell_bd">添加更多</div>
+    </a>
+</div>
+<div class="cells_title">开关</div>
+<div class="cells cells_form">
+    <div class="cell cell_switch">
+        <div class="cell_bd">标题文字</div>
+        <div class="cell_ft">
+            <input class="switch" type="checkbox">
+        </div>
+    </div>
+</div>
+<div class="cells_title">文本框</div>
+<div class="cells">
+    <div class="cell">
+        <div class="cell_bd">
+            <input class="input" type="text" placeholder="请输入文本">
+        </div>
+    </div>
+</div>
+<div class="cells_title">文本域</div>
+<div class="cells cells_form">
+    <div class="cell">
+        <div class="cell_bd">
+            <textarea class="textarea" placeholder="请输入文本" rows="3"></textarea>
+            <div class="textarea-counter"><span>0</span>/200</div>
+        </div>
+    </div>
+</div>
+<div class="cells_title">选择</div>
+<div class="cells">
+    <div class="cell cell_select cell_select-before">
+        <div class="cell_hd">
+            <select class="select" name="select2">
+                <option value="1">+86</option>
+                <option value="2">+80</option>
+                <option value="3">+84</option>
+                <option value="4">+87</option>
+            </select>
+        </div>
+        <div class="cell_bd">
+            <input class="input" type="number" pattern="[0-9]*" placeholder="请输入号码">
+        </div>
+    </div>
+</div>
+<div class="cells_title">选择</div>
+<div class="cells">
+    <div class="cell cell_select">
+        <div class="cell_bd">
+            <select class="select" name="select1">
+                <option selected="" value="1">微信号</option>
+                <option value="2">QQ号</option>
+                <option value="3">Email</option>
+            </select>
+        </div>
+    </div>
+    <div class="cell cell_select cell_select-after">
+        <div class="cell_hd">
+            <label for="" class="label">国家/地区</label>
+        </div>
+        <div class="cell_bd">
+            <select class="select" name="select2">
+                <option value="1">中国</option>
+                <option value="2">美国</option>
+                <option value="3">英国</option>
+            </select>
+        </div>
+    </div>
+</div>
+*/
+.check_label {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.check_label:active {
+  background-color: #ececec;
+}
+.check,
+.app-check {
+  position: absolute;
+  left: -9999em;
+}
+.cells_radio .cell_ft {
+  padding-left: 0.35em;
+}
+.cells_radio .icon-checked {
+  width: 22px;
+  height: 22px;
+  background-size: 100% auto;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: -2px;
+}
+.cells_radio .check:checked + .icon-checked {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAABVUlEQVRIS+2UMUsDMRiG3y+2uZyT/8BFXARHRxF7rWMHoeDSUXQQZxFcdBYHwUVwEBdxcFGhVlocXKw/w8HFgijmLnf3yQ3WWnvX0qOgYObkyZM3eUMY0qAhcfEPbiX7y6OoYUz5cleTtwEHT5F2euMGRu2mrAOYfBfeFHJ4TA+uQSnfugLzTMA8axbMw2fIgxvXkFHGugB4DiNhXuf82/ZODAZmCLsqTxkoMlPRLbiXnUVrgdUNxhFY9UCEJeOY+6RGqoo8AlAOBRY9xzvvNvfLuIGsepZ1EKYD4vk4uF3J7oHEOnNY1gVzHCfwPYo72OpVVuPg6lpuEmgnRLjm5s1+0ql+ZhwDtyrZFUHigJm3dcHb6vV5db+8DngmpAkmnAB0qPPuci9o8jtug4Nhg3CmHW8JBE4HjlZH8LfoBdCLbrqrKCHoB5q+eQm7DFaQPrT/HvgD0j6AF8oG24wAAAAASUVORK5CYII=")
+    no-repeat;
+}
+.cells_checkbox .cell_hd {
+  padding-right: 0.35em;
+}
+.cells_checkbox .icon-checked {
+  width: 22px;
+  height: 22px;
+  background-size: 100% auto;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: -2px;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAACSklEQVRIS7WVy4sTQRDGq2eyCRHEgwfBgw8EH6BexMWLDwQP3sSLuLtGkoWuDtE5BEFwj8oeFBfMIdM9zSjCGhHRf0EE/wU9iuBBEA8qhnUm01PSwSx57Ca7Ozowl+mqH8U331fN4D89bBzX9/2jjLFLALCNMZYAwBQA7CeiXQDwhohktVr9uhZjTXAYhtuTJLkJALbpJSL+GG7WWh9J03Tefo+iaMHzvKi/ZgTs+/604zjYbrdv1Ov1lUlKaa2PG2PuFQqFUrlc/t6rHwArpfYQ0QPG2BwidiZBe+fNZvOQ67p3OedXGGNkvw+Dn0dRhJ7n/dwotFcnpTzDGDuJiA8HwL7vz7qu+5tz/mqz0F69Ukqnabpgf+jqxEqpZ4g4u1Wo7dNan0rTdBoRG11wo9Eo5PP5JSFELQuYiFgQBC1EvNoFW+sYYy4KIZaygG2vlPKJEKLcBQdBcJaI9iHi06xgpVSIiPNdsFLqGBFd+BcTK6UeI2KlB94BAPcREbNMbDW2JhBCzKy6Qkr5WghxOQv4ryvOI+JiP3jOcZyVLD6WUi4DwKIQ4sNA8qSUrTiOxVaSp7U+bYy5JoTgI5EOw3B3p9N5xBib2cyuCILgIBG1kiQ5V6vVfo2A+9Jzq1gsXi+VSu1JmltHAcCyHYZz/n7N7daX+cMAcAcA3gHAizH7WBBRPo7j28Pyjb1BtNYnjDFVADjAGPsIAN9skADAvp8cx2lyzt9u+AYZLlRKTbmuu9cYszOXy32uVCpfent3PanGTjxJ33HnfwAlcAgm+JT+4gAAAABJRU5ErkJggg==")
+    no-repeat;
+}
+.cells_checkbox .check:checked + .icon-checked {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAACiElEQVRIS7XVQUgUURgH8P9/Vt/MYkIYHtJDUdQhiS5FoWFEOykdOkUdokNZ0EmCQiw6FdVB8tLZDIOybkGHcFeTEkG6BeYhskBKwVAIYt+b3X1fjLrrru6uu4fmOHzf733zvfe9If7Tw7LuBzR6RvmEHAG4B4KMhcyS8lb76fFyucXhCdRHk7X3RNhN0ikGCGQGIv26OTWEFgQbYzbB3mhNO23kBYDmSrokItO6NojhJBby4wvgEEXGGSMZqQTNxohgjmLakh2Yy75bh9+hIeqoryAbqkFzOPBN15mDaEUyfJeDvRH1kOTtalARyYBIEty2lteT9E3fOjwN5f1SvwnWVwoLRCxxPmLtPBiZWMtbSMZMEwhZqdgdcc86xJtqUBCX9FIwHN2uhkGey7WEmXYdS39cgb24uk/wbiVwWGkpdCWfuJmMmf4sPEDwyvpGyCAEx0nuy19sBYVc1bHUs2hcvcqvNBtnxT42p1O3NsECSVviUJAOlj3HnSSxO0zKR72EGiJ4sdgXWkif8YOeVXhEPSB5JxcoWLRAmyNGg+4UiJ0C26VjqUEvoZ6XQsN8C3Qb3zwpvXmCeYg5aul6hD2h/dSAl1Bhyy6X24sM5EDgBzOr5zg8bj/VEsm6gp4KfmhrWtGJeS+unm6FCuSL9oOWwgGJq0cEezdWIyLhNI4TuLb1qZELST94XQAjgR1RcT8DaNoa2BwhwHsdM6fC4SiEw0FJuPsdiwkQjdXgIviurTmMTixl84pcm9gF644S2FsJLiIvdTq4jjP4kx9f/KKfRNT9W9tFODdKLyCfxNpe3ZEeK1ZA+V+TgO5oTQfFORbOiJDLAGaNMlNox2K5LyoPV9KLEjH/AOW3DiZQzXojAAAAAElFTkSuQmCC")
+    no-repeat;
+}
+.label,
+.app-label {
+  display: block;
+  width: 105px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.input,
+.app-input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  -webkit-appearance: none;
+  background-color: transparent;
+  font-size: inherit;
+  color: inherit;
+  height: 1.47058824em;
+  line-height: 1.47058824;
+}
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button,
+.app-input::-webkit-outer-spin-button,
+.app-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.textarea,
+.app-textarea {
+  display: block;
+  border: 0;
+  resize: none;
+  width: 100%;
+  color: inherit;
+  font-size: 1em;
+  line-height: inherit;
+  outline: 0;
+}
+.textarea-counter {
+  color: #b2b2b2;
+  text-align: right;
+}
+.cell_warn .textarea-counter {
+  color: #e64340;
+}
+.toptips,
+.app-toptips {
+  display: none;
+  position: fixed;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 5px;
+  font-size: 14px;
+  text-align: center;
+  color: #fff;
+  z-index: 5000;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.toptips_warn {
+  background-color: #e64340;
+}
+.cells_form .cell_ft {
+  font-size: 0;
+}
+.cells_form .icon-warn {
+  display: none;
+}
+.cells_form input,
+.cells_form textarea,
+.cells_form label[for] {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.cell_warn {
+  color: #e64340;
+}
+.cell_warn .icon-warn {
+  display: inline-block;
+}
+
+.cell_select {
+  padding: 0;
+}
+.cell_select .select {
+  padding-right: 30px;
+}
+.cell_select .cell_bd:after {
+  content: " ";
+  display: inline-block;
+  height: 6px;
+  width: 6px;
+  border-width: 2px 2px 0 0;
+  border-color: #c8c8cd;
+  border-style: solid;
+  -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  position: relative;
+  top: -2px;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  margin-top: -4px;
+}
+.select,
+.app-select {
+  -webkit-appearance: none;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  width: 100%;
+  font-size: inherit;
+  height: 45px;
+  line-height: 45px;
+  position: relative;
+  z-index: 1;
+  padding-left: 15px;
+}
+.cell_select-before {
+  padding-right: 15px;
+}
+.cell_select-before .select {
+  width: 105px;
+  box-sizing: border-box;
+}
+.cell_select-before .cell_hd {
+  position: relative;
+}
+.cell_select-before .cell_hd:after {
+  content: " ";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 1px;
+  bottom: 0;
+  border-right: 1px solid #e5e5e5;
+  color: #e5e5e5;
+  -webkit-transform-origin: 100% 0;
+  transform-origin: 100% 0;
+  -webkit-transform: scaleX(0.5);
+  transform: scaleX(0.5);
+}
+.cell_select-before .cell_hd:before {
+  content: " ";
+  display: inline-block;
+  height: 6px;
+  width: 6px;
+  border-width: 2px 2px 0 0;
+  border-color: #c8c8cd;
+  border-style: solid;
+  -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  position: relative;
+  top: -2px;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  margin-top: -4px;
+}
+.cell_select-before .cell_bd {
+  padding-left: 15px;
+}
+.cell_select-before .cell_bd:after {
+  display: none;
+}
+.cell_select-after {
+  padding-left: 15px;
+}
+.cell_select-after .select {
+  padding-left: 0;
+}
+.cell_vcode {
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+}
+.vcode-img {
+  margin-left: 5px;
+  height: 45px;
+  vertical-align: middle;
+}
+.vcode-btn {
+  display: inline-block;
+  height: 45px;
+  margin-left: 5px;
+  padding: 0 0.6em 0 0.7em;
+  border-left: 1px solid #e5e5e5;
+  line-height: 45px;
+  vertical-align: middle;
+  font-size: 17px;
+  color: #09bb07;
+}
+button.vcode-btn {
+  background-color: transparent;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 0;
+  outline: 0;
+}
+.vcode-btn:active {
+  color: #259e24;
+}
+
+.cell_switch {
+  padding-top: 6.5px;
+  padding-bottom: 6.5px;
+}
+.switch,
+.app-switch {
+  -webkit-appearance: none;
+  appearance: none;
+}
+.switch,
+.app-switch,
+.switch-cp_box {
+  position: relative;
+  width: 52px;
+  height: 32px;
+  border: 1px solid #dfdfdf;
+  outline: 0;
+  border-radius: 16px;
+  box-sizing: border-box;
+  background-color: #dfdfdf;
+  -webkit-transition: background-color 0.1s, border 0.1s;
+  transition: background-color 0.1s, border 0.1s;
+}
+.switch:before,
+.app-switch:before,
+.switch-cp_box:before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: #fdfdfd;
+  -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.45, 1, 0.4, 1);
+  transition: -webkit-transform 0.35s cubic-bezier(0.45, 1, 0.4, 1);
+  transition: transform 0.35s cubic-bezier(0.45, 1, 0.4, 1);
+  transition: transform 0.35s cubic-bezier(0.45, 1, 0.4, 1),
+    -webkit-transform 0.35s cubic-bezier(0.45, 1, 0.4, 1);
+}
+.switch:after,
+.app-switch:after,
+.switch-cp_box:after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.4, 0.4, 0.25, 1.35);
+  transition: -webkit-transform 0.35s cubic-bezier(0.4, 0.4, 0.25, 1.35);
+  transition: transform 0.35s cubic-bezier(0.4, 0.4, 0.25, 1.35);
+  transition: transform 0.35s cubic-bezier(0.4, 0.4, 0.25, 1.35),
+    -webkit-transform 0.35s cubic-bezier(0.4, 0.4, 0.25, 1.35);
+}
+.switch:checked,
+.app-switch:checked,
+.switch-cp_input:checked ~ .switch-cp_box {
+  border-color: #1aad19;
+  background-color: #1aad19;
+}
+.switch:checked:before,
+.app-switch:checked:before,
+.switch-cp_input:checked ~ .switch-cp_box:before {
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+.switch:checked:after,
+.app-switch:checked:after,
+.switch-cp_input:checked ~ .switch-cp_box:after {
+  -webkit-transform: translateX(20px);
+  transform: translateX(20px);
+}
+.switch-cp_input {
+  position: absolute;
+  left: -9999px;
+}
+.switch-cp_box {
+  display: block;
+}

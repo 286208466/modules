@@ -1,0 +1,319 @@
+/*
+ISO1
+<div class="js_dialog" id="iosDialog1" style="opacity: 1;">
+    <div class="mask"></div>
+    <div class="dialog">
+        <div class="dialog_hd"><strong class="dialog_title">弹窗标题</strong></div>
+        <div class="dialog_bd">弹窗内容，告知当前状态、信息和解决方法，描述文字尽量控制在三行内</div>
+        <div class="dialog_ft">
+            <a class="dialog_btn dialog_btn_default">辅助操作</a>
+            <a class="dialog_btn dialog_btn_primary">主操作</a>
+        </div>
+    </div>
+</div>
+IOS2
+<div class="js_dialog" id="iosDialog2" style="opacity: 1;">
+    <div class="mask"></div>
+    <div class="dialog">
+        <div class="dialog_bd">弹窗内容，告知当前状态、信息和解决方法，描述文字尽量控制在三行内</div>
+        <div class="dialog_ft">
+            <a class="dialog_btn dialog_btn_primary">知道了</a>
+        </div>
+    </div>
+</div>
+
+安卓1
+<div class="js_dialog" id="androidDialog1" style="opacity: 1;">
+    <div class="mask"></div>
+    <div class="dialog skin_android">
+        <div class="dialog_hd"><strong class="dialog_title">弹窗标题</strong></div>
+        <div class="dialog_bd">
+            弹窗内容，告知当前状态、信息和解决方法，描述文字尽量控制在三行内
+        </div>
+        <div class="dialog_ft">
+            <a class="dialog_btn dialog_btn_default">辅助操作</a>
+            <a class="dialog_btn dialog_btn_primary">主操作</a>
+        </div>
+    </div>
+</div>
+安卓2
+<div class="js_dialog" id="androidDialog2" style="opacity: 1;">
+    <div class="mask"></div>
+    <div class="dialog skin_android">
+        <div class="dialog_bd">
+            弹窗内容，告知当前状态、信息和解决方法，描述文字尽量控制在三行内
+        </div>
+        <div class="dialog_ft">
+            <a class="dialog_btn dialog_btn_default">辅助操作</a>
+            <a class="dialog_btn dialog_btn_primary">主操作</a>
+        </div>
+    </div>
+</div>
+*/
+
+.dialog,
+.app-dialog {
+  position: fixed;
+  z-index: 5000;
+  width: 80%;
+  max-width: 300px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  text-align: center;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.dialog_hd {
+  padding: 20px 25px 10px 25px;
+}
+
+.dialog_title {
+  font-weight: 400;
+  font-size: 18px;
+  display: block;
+}
+
+.dialog_bd {
+  padding: 0 25px 12px 25px;
+  min-height: 40px;
+  font-size: 15px;
+  line-height: 20px;
+  word-wrap: break-word;
+  word-break: break-all;
+  color: #808080;
+}
+
+.dialog_bd:first-child {
+  padding: 30px 20px 25px 20px;
+  color: #353535;
+}
+
+.dialog_ft {
+  position: relative;
+  line-height: 44px;
+  font-size: 15px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.dialog_ft:after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 1px;
+  border-top: 1px solid #d5d5d6;
+  color: #d5d5d6;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+
+.dialog_btn {
+  display: block;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  color: #09bb07;
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  position: relative;
+}
+
+.dialog_btn:active {
+  background-color: #eeeeee;
+}
+
+.dialog_btn:after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  bottom: 0;
+  border-left: 1px solid #d5d5d6;
+  color: #d5d5d6;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleX(0.5);
+  transform: scaleX(0.5);
+}
+
+.dialog_btn:first-child:after {
+  display: none;
+}
+
+.dialog_btn_default {
+  color: #353535;
+}
+
+.dialog_btn_primary {
+  color: #09bb07;
+}
+
+.skin_android .dialog {
+  text-align: left;
+  box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.1);
+}
+
+.skin_android .dialog_title {
+  font-size: 16px;
+}
+
+.skin_android .dialog_hd {
+  text-align: left;
+}
+
+.skin_android .dialog_bd {
+  color: #808080;
+  font-size: 14px;
+  text-align: left;
+}
+
+.skin_android .dialog_bd:first-child {
+  padding: 25px 25px 10px 25px;
+  color: #353535;
+}
+
+.skin_android .dialog_ft {
+  display: block;
+  text-align: right;
+  line-height: 42px;
+  font-size: 16px;
+  padding: 0 25px 10px 25px;
+}
+
+.skin_android .dialog_ft:after {
+  display: none;
+}
+
+.skin_android .dialog_btn {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 10px;
+}
+
+.skin_android .dialog_btn:after {
+  display: none;
+}
+
+.skin_android .dialog_btn:active {
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+.skin_android .dialog_btn:visited {
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+.skin_android .dialog_btn:last-child {
+  margin-right: -10px;
+}
+
+.skin_android .dialog_btn_default {
+  color: #808080;
+}
+
+@media screen and (min-width: 1024px) {
+  .dialog {
+    width: 35%;
+  }
+}
+
+/*
+	对话框dialog
+	=========
+	html
+	=========
+	<a id="showDialog">显示弹出框</a>
+	<div id="dialog" style="display: none">
+		<div class="mask"></div>
+		<div class="dialog">
+			<div class="dialog-title">标题</div>
+			<div class="dialog-content">
+				弹框内容
+			</div>
+			<div class="dialog-op">
+				<a class="dialog-btn dialog-btn-default">操作1</a>
+				<a class="dialog-btn">操作2</a>
+			</div>
+		</div>
+	</div>
+	=========
+	JS
+	=========
+	$('#showDialog').on('click', function(){
+        $("#dialog").fadeIn(200);
+    });
+*/
+/* 第二种 */
+/* .dialog {
+  background-color: #ffffff;
+  border-radius: 3px;
+  left: 50%;
+  max-width: 300px;
+  overflow: hidden;
+  position: fixed;
+  text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  z-index: 5000;
+}
+.dialog-title {
+  padding: 10px 10px 0 10px;
+  font-size: 18px;
+}
+.dialog-content {
+  padding: 10px 15px;
+  text-align: left;
+}
+.dialog-op {
+  display: flex;
+  line-height: 42px;
+  position: relative;
+}
+.dialog-op::after {
+  border-top: 1px solid #d5d5d6;
+  color: #d5d5d6;
+  content: " ";
+  height: 1px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: scaleY(0.5);
+  transform-origin: 0 0 0;
+}
+.dialog-btn:first-child::after {
+  display: none;
+}
+.dialog-btn::after {
+  border-left: 1px solid #d5d5d6;
+  bottom: 0;
+  color: #d5d5d6;
+  content: " ";
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: scaleX(0.5);
+  transform-origin: 0 0 0;
+  width: 1px;
+}
+.dialog-btn-default {
+  color: #353535;
+}
+.dialog-btn {
+  -moz-box-flex: 1;
+  color: #3cc51f;
+  display: block;
+  flex: 1 1 0;
+  position: relative;
+  text-decoration: none;
+} */

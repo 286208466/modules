@@ -1,0 +1,86 @@
+/*
+	头部
+*/
+.header {
+  position: fixed;
+  height: 44px;
+  top: 0;
+  width: 100%;
+  max-width: 768px;
+  z-index: 1000;
+  background: #fff;
+  color: #333;
+}
+.header .leftbtn,
+.header .rightbtn {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  line-height: normal;
+}
+.header i {
+  font-size: 20px;
+}
+.header .rightbtn {
+  left: auto;
+  right: 15px;
+}
+.header > p {
+  text-align: center;
+  line-height: 44px;
+  font-size: 16px;
+}
+.header::after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 0;
+  border-bottom: 1px solid #ccc;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+/*
+	底部
+*/
+.footer {
+  height: 48px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-width: 768px;
+  background: #fff;
+}
+.footer::after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 0;
+  border-top: 1px solid #ccc;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+.footer li {
+  float: left;
+  width: 25%;
+}
+.footer li a {
+  display: block;
+  text-align: center;
+  padding-top: 3px;
+  color: #000;
+}
+.footer li.cur a {
+  color: #3299ff;
+}
+.footer li a span {
+  display: block;
+  font-size: 12px;
+}

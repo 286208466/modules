@@ -1,0 +1,52 @@
+/*
+	flex组件
+	<div class="app-flex">
+		<div class="flex_item"></div>
+	</div>
+	<div class="app-flex">
+		<div class="flex_item"></div>
+		<div class="flex_item"></div>
+	</div>
+	<div class="app-flex">
+		<div class="flex_item"></div>
+		<div class="flex_item"></div>
+		<div class="flex_item"></div>
+	</div>
+	<div class="app-flex">
+		<div class="flex_item"></div>
+		<div class="flex_item"></div>
+		<div class="flex_item"></div>
+		<div class="flex_item"></div>
+	</div>
+	<div class="app-flex">
+		<div></div>
+		<div class="flex_item"></div>
+		<div></div>
+	</div>
+*/
+/* 第一种 */
+.app-flex {
+  display: flex;
+}
+.flex_item {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+/* 第二种 */
+.app-flex2 {
+  display: flex;
+}
+.flex_item2 {
+  -moz-box-flex: 1;
+  flex: 1 1 0;
+}
+.app-flex2 .placeholder {
+  background-color: #ebebeb;
+  color: #cfcfcf;
+  height: 2.3em;
+  line-height: 2.3em;
+  margin: 5px;
+  padding: 0 10px;
+  text-align: center;
+}

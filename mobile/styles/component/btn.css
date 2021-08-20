@@ -1,0 +1,252 @@
+/*
+<a class="btn btn_primary">页面主操作 Normal</a>
+<a class="btn btn_primary btn_loading"><i class="loading"></i>页面主操作 Loading</a>
+<a class="btn btn_disabled btn_primary">页面主操作 Disabled</a>
+<a class="btn btn_default">页面次要操作 Normal</a>
+<a class="btn btn_default btn_loading"><i class="loading"></i>页面次操作 Loading</a>
+<a class="btn btn_disabled btn_default">页面次要操作 Disabled</a>
+<a class="btn btn_warn">警告类操作 Normal</a>
+<a class="btn btn_warn btn_loading"><i class="loading"></i>警告类操作 Loading</a>
+<a class="btn btn_disabled btn_warn">警告类操作 Disabled</a>
+
+<a class="btn btn_plain-default">按钮</a>
+<a class="btn btn_plain-default btn_plain-disabled">按钮</a>
+<a class="btn btn_plain-primary">按钮</a>
+<a class="btn btn_plain-primary btn_plain-disabled">按钮</a>
+
+<a class="btn btn_mini btn_primary">按钮</a>
+<a class="btn btn_mini btn_default">按钮</a>
+<a class="btn btn_mini btn_warn">按钮</a>
+
+<div class="btn-area btn-area_inline">
+    <a class="btn btn_mini btn_primary">按钮</a>
+    <a class="btn btn_mini btn_default">按钮</a>
+    <a class="btn btn_mini btn_warn">按钮</a>
+</div>
+*/
+.btn,
+.app-btn {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  line-height: 40px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+.btn:after,
+.app-btn:after {
+  content: " ";
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.btn_inline {
+  display: inline-block;
+}
+
+.btn_default {
+  color: #000000;
+  background-color: #f8f8f8;
+}
+
+.btn_default:not(.btn_disabled):visited {
+  color: #000000;
+}
+
+.btn_default:not(.btn_disabled):active {
+  color: rgba(0, 0, 0, 0.6);
+  background-color: #dedede;
+}
+
+.btn_primary {
+  background-color: #1aad19;
+}
+
+.btn_primary:not(.btn_disabled):visited {
+  color: #ffffff;
+}
+
+.btn_primary:not(.btn_disabled):active {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: #179b16;
+}
+
+.btn_warn {
+  background-color: #e64340;
+}
+
+.btn_warn:not(.btn_disabled):visited {
+  color: #ffffff;
+}
+
+.btn_warn:not(.btn_disabled):active {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: #ce3c39;
+}
+
+.btn_disabled {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.btn_disabled.btn_default {
+  color: rgba(0, 0, 0, 0.3);
+  background-color: #f7f7f7;
+}
+
+.btn_disabled.btn_primary {
+  background-color: #9ed99d;
+}
+
+.btn_disabled.btn_warn {
+  background-color: #ec8b89;
+}
+
+.btn_loading .loading {
+  margin: -0.2em 0.34em 0 0;
+}
+
+.btn_loading.btn_primary,
+.btn_loading.btn_warn {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.btn_loading.btn_primary {
+  background-color: #179b16;
+}
+
+.btn_loading.btn_warn {
+  background-color: #ce3c39;
+}
+
+.btn_plain-primary {
+  color: #1aad19;
+  border: 1px solid #1aad19;
+}
+
+.btn_plain-primary:not(.btn_plain-disabled):active {
+  color: rgba(26, 173, 25, 0.6);
+  border-color: rgba(26, 173, 25, 0.6);
+}
+
+.btn_plain-primary:after {
+  border-width: 0;
+}
+
+.btn_plain-default {
+  color: #353535;
+  border: 1px solid #353535;
+}
+
+.btn_plain-default:not(.btn_plain-disabled):active {
+  color: rgba(53, 53, 53, 0.6);
+  border-color: rgba(53, 53, 53, 0.6);
+}
+
+.btn_plain-default:after {
+  border-width: 0;
+}
+
+.btn_plain-disabled {
+  color: rgba(0, 0, 0, 0.2);
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+button.btn,
+input.btn,
+button.app-btn,
+input.app-btn {
+  width: 100%;
+  border-width: 0;
+  outline: 0;
+  -webkit-appearance: none;
+}
+
+button.btn:focus,
+input.btn:focus,
+button.app-btn:focus,
+input.app-btn:focus {
+  outline: 0;
+}
+
+button.btn_inline,
+input.btn_inline,
+button.btn_mini,
+input.btn_mini {
+  width: auto;
+}
+
+button.btn_plain-primary,
+input.btn_plain-primary,
+button.btn_plain-default,
+input.btn_plain-default {
+  border-width: 1px;
+  background-color: transparent;
+}
+
+.btn_mini {
+  display: inline-block;
+  padding: 0 15px;
+  line-height: 28px;
+  font-size: 12px;
+}
+
+.btn.btn_inline + .btn.btn_inline {
+  margin-top: auto;
+  margin-left: 15px;
+}
+
+.btn-area {
+  margin: 15px;
+}
+
+.btn-area_inline {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.btn-area_inline .btn {
+  margin-top: auto;
+  margin-right: 15px;
+  width: 100%;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+.btn-area_inline .btn:last-child {
+  margin-right: 0;
+}
+
+.app-btn[color="green"] {
+  background-color: #1aad19;
+  color: #fff;
+}
+.app-btn[color="red"] {
+  background-color: #e64340;
+  color: #fff;
+}
+.app-btn[color="yellow"] {
+  background-color: #f08713;
+  color: #fff;
+}

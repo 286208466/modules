@@ -1,0 +1,157 @@
+/*
+HTML---------------------------------
+<a id="showIOSActionSheet">显示Actionsheet</a>        
+<div>
+    <div class="mask" id="iosMask"></div>
+    <div class="actionsheet actionsheet_toggle" id="iosActionsheet">
+        <div class="actionsheet_title">
+            <p class="actionsheet_title-text">这是一个标题，可以为一行或者两行。</p>
+        </div>
+        <div class="actionsheet_menu">
+            <div class="actionsheet_cell">示例菜单</div>
+            <div class="actionsheet_cell">示例菜单</div>
+            <div class="actionsheet_cell">示例菜单</div>
+            <div class="actionsheet_cell">示例菜单</div>
+        </div>
+        <div class="actionsheet_action">
+            <div class="actionsheet_cell" id="iosActionsheetCancel">取消</div>
+        </div>
+    </div>
+</div>
+JS--------------------------------------
+var $iosActionsheet = $('#iosActionsheet');
+var $iosMask = $('#iosMask');
+
+function hideActionSheet() {
+    $iosActionsheet.removeClass('actionsheet_toggle');
+    $iosMask.fadeOut(200);
+}
+
+$iosMask.on('click', hideActionSheet);
+$('#iosActionsheetCancel').on('click', hideActionSheet);
+$("#showIOSActionSheet").on("click", function(){
+    $iosActionsheet.addClass('actionsheet_toggle');
+    $iosMask.fadeIn(200);
+});
+*/
+
+.app-actionsheet {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  -webkit-transform: translate(0, 100%);
+  transform: translate(0, 100%);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 5000;
+  width: 100%;
+  background-color: #efeff4;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.actionsheet_title {
+  position: relative;
+  height: 65px;
+  padding: 0 20px;
+  line-height: 1.4;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+  font-size: 14px;
+  color: #808080;
+  background: #fcfcfd;
+}
+
+.actionsheet_title:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 1px;
+  border-bottom: 1px solid #e5e5e5;
+  color: #e5e5e5;
+  -webkit-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+
+.actionsheet_title .actionsheet_title-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.actionsheet_menu {
+  // @first
+  background-color: #fcfcfd;
+
+  // @second
+  // background-color: #ffffff;
+}
+
+.actionsheet_action {
+  margin-top: 6px;
+
+  // @first
+  background-color: #fcfcfd;
+
+  // @second
+  // background-color: #ffffff;
+}
+
+.actionsheet_cell {
+  position: relative;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.actionsheet_cell:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 1px;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+
+  // @first
+  border-top: 1px solid #e5e5e5;
+  color: #e5e5e5;
+
+  // @second
+  // border-top: 1px solid #d9d9d9;
+  // color: #d9d9d9;
+}
+
+.actionsheet_cell:active {
+  background-color: #ececec;
+}
+
+.actionsheet_cell:first-child:before {
+  display: none;
+}
+
+.actionsheet_toggle {
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
