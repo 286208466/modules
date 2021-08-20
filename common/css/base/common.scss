@@ -1,0 +1,23 @@
+i[class^="icon-"] {
+  display: inline-block;
+  vertical-align: middle;
+}
+/*
+    隐藏
+*/
+.hide {
+  display: none !important;
+}
+.hidden {
+  visibility: hidden;
+}
+.show {
+  display: block;
+}
+[hidden] {
+  display: none !important;
+}
+.inlineBlock {
+  display: inline-block;
+  vertical-align: middle;
+}

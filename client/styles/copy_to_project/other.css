@@ -294,3 +294,17 @@
 .ui-label-green {
   background: #4caf50;
 }
+
+
+
+/*
+    flex
+*/
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flexItem {
+  flex: 1;
+}
