@@ -1,23 +1,27 @@
 export function initHtmlFont() {
   var doc = document;
-  var docEl = documentElement;
+  var docEl = document.documentElement;
   var timer;
-  function refresh() {
+  var refreshFun = function () {
     var width = docEl.getBoundingClientRect().width;
     if (width > 750) {
       width = 750;
     }
     var rem = width / 7.5;
     docEl.style.fontSize = rem + "px";
-  }
-  refresh();
+  };
+  refreshFun();
   window.addEventListener("resize", function () {
     timer && clearTimeout(timer);
-    timer = setTimeout(refresh, 400);
+    timer = setTimeout(() => {
+      refreshFun();
+    }, 400);
   });
   window.addEventListener("pageshow", function () {
     timer && clearTimeout(timer);
-    timer = setTimeout(refresh, 400);
+    timer = setTimeout(() => {
+      refreshFun();
+    }, 400);
   });
 }
 
@@ -33,6 +37,20 @@ export function flexible() {
   setRem();
   window.addEventListener("resize", function () {
     timer && clearTimeout(timer);
-    timer = setTimeout(refresh, 400);
+    timer = setTimeout(() => {
+      setRem();
+    }, 400);
   });
+}
+
+/**
+ * 移动端rem单位设置
+ * 适用设计稿宽度为750
+ * 计算方式：1rem = 100px;
+ */
+export function simple_flexible() {
+  var clientWidth = document.getElementsByTagName("body")[0].clientWidth;
+  var designWidth = 750;
+  document.getElementsByTagName("html")[0].style.fontSize =
+    (clientWidth / designWidth) * 100 + "px";
 }
