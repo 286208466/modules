@@ -1,0 +1,56 @@
+.app-flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.app-flex__item {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+.app-flex .placeholder {
+  background-color: #ebebeb;
+  color: #cfcfcf;
+  height: 2.3em;
+  line-height: 2.3em;
+  margin: 5px;
+  padding: 0 10px;
+  text-align: center;
+}
+
+/*
+<div class="app-flex">
+  <div class="app-flex__item"><div class="placeholder">app</div></div>
+</div>
+<div class="app-flex">
+  <div class="app-flex__item"><div class="placeholder">app</div></div>
+  <div class="app-flex__item"><div class="placeholder">app</div></div>
+</div>
+<div class="app-flex">
+  <div class="app-flex__item"><div class="placeholder">app</div></div>
+  <div class="app-flex__item"><div class="placeholder">app</div></div>
+  <div class="app-flex__item"><div class="placeholder">app</div></div>
+</div>
+<div class="app-flex">
+  <div class="app-flex__item"><div class="placeholder">app</div></div>
+  <div class="app-flex__item"><div class="placeholder">app</div></div>
+  <div class="app-flex__item"><div class="placeholder">app</div></div>
+  <div class="app-flex__item"><div class="placeholder">app</div></div>
+</div>
+<div class="app-flex">
+  <div><div class="placeholder">app</div></div>
+  <div class="app-flex__item"><div class="placeholder">app</div></div>
+  <div><div class="placeholder">app</div></div>
+</div>
+*/
+
+/* 第二种 */
+.app-flex2 {
+  display: flex;
+}
+.app-flex2 .flex__item {
+  -moz-box-flex: 1;
+  flex: 1 1 0;
+}

@@ -1,0 +1,448 @@
+/*
+
+成功提示页
+<div class="page msg_success js_show">
+  <div class="weui-msg">
+    <div class="weui-msg__icon-area">
+      <i class="weui-icon-success weui-icon_msg"></i>
+    </div>
+    <div class="weui-msg__text-area">
+      <h2 class="weui-msg__title">操作成功</h2>
+      <p class="weui-msg__desc">
+        内容详情，可根据实际需要安排，如果换行则不超过规定长度，居中展现<a
+          href="javascript:"
+          >文字链接</a
+        >
+      </p>
+    </div>
+    <div class="weui-msg__opr-area">
+      <p class="weui-btn-area">
+        <a href="javascript:history.back();" class="weui-btn weui-btn_primary"
+          >推荐操作</a
+        >
+      </p>
+    </div>
+    <div class="weui-msg__tips-area">
+      <p class="weui-msg__tips">
+        提示详情，可根据实际需要安排，如果换行则不超过规定长度，居中展现<a
+          href="javascript:"
+          >文字链接</a
+        >
+      </p>
+    </div>
+    <div class="weui-msg__extra-area">
+      <div class="weui-footer">
+        <p class="weui-footer__links">
+          <a href="javascript:" class="weui-footer__link">底部链接文本</a>
+        </p>
+        <p class="weui-footer__text">Copyright © 2008-2016 weui.io</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="page__ft j_bottom">
+    <a href="javascript:home()"><img src="images/icon_footer_link.png" /></a>
+  </div>
+</div>
+
+失败提示页
+<div class="page msg_warn js_show">
+  <div class="weui-msg">
+    <div class="weui-msg__icon-area">
+      <i class="weui-icon-warn weui-icon_msg"></i>
+    </div>
+    <div class="weui-msg__text-area">
+      <h2 class="weui-msg__title">操作失败</h2>
+      <p class="weui-msg__desc">
+        内容详情，可根据实际需要安排，如果换行则不超过规定长度，居中展现<a
+          href="javascript:"
+          >文字链接</a
+        >
+      </p>
+    </div>
+    <div class="weui-msg__tips-area">
+      <p class="weui-msg__tips">
+        提示详情，可根据实际需要安排，如果换行则不超过规定长度，居中展现<a
+          href="javascript:"
+          >文字链接</a
+        >
+      </p>
+    </div>
+    <div class="weui-msg__opr-area">
+      <p class="weui-btn-area">
+        <a href="javascript:history.back();" class="weui-btn weui-btn_default"
+          >辅助操作</a
+        >
+      </p>
+    </div>
+    <div class="weui-msg__extra-area">
+      <div class="weui-footer">
+        <p class="weui-footer__links">
+          <a href="javascript:" class="weui-footer__link">底部链接文本</a>
+        </p>
+        <p class="weui-footer__text">Copyright © 2008-2016 weui.io</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="page__ft j_bottom">
+    <a href="javascript:home()"><img src="images/icon_footer_link.png" /></a>
+  </div>
+</div>
+
+无图标提示页
+<div class="page msg_text js_show">
+  <div class="weui-msg">
+    <div class="weui-msg__text-area">
+      <h2 class="weui-msg__title">操作成功</h2>
+      <p class="weui-msg__desc">
+        内容详情，可根据实际需要安排，如果换行则不超过规定长度，居中展现<a
+          href="javascript:"
+          >文字链接</a
+        >
+      </p>
+    </div>
+    <div class="weui-msg__opr-area">
+      <p class="weui-btn-area">
+        <a href="javascript:history.back();" class="weui-btn weui-btn_primary"
+          >推荐操作</a
+        >
+      </p>
+    </div>
+  </div>
+
+  <div class="page__ft j_bottom">
+    <a href="javascript:home()"><img src="images/icon_footer_link.png" /></a>
+  </div>
+</div>
+
+无图标提示页
+<div class="page msg_text_primary js_show">
+  <div class="weui-msg">
+    <div class="weui-msg__text-area">
+      <p class="weui-msg__desc">
+        内容详情，可根据实际需要安排，如果换行则不超过规定长度，居中展现<a
+          href="javascript:"
+          >文字链接</a
+        >
+      </p>
+      <p class="weui-msg__desc-primary">
+        内容详情，可根据实际需要安排，如果换行则不超过规定长度，居中展现
+      </p>
+    </div>
+    <div class="weui-msg__opr-area">
+      <p class="weui-btn-area">
+        <a href="javascript:history.back();" class="weui-btn weui-btn_primary"
+          >推荐操作</a
+        >
+      </p>
+    </div>
+    <div class="weui-msg__tips-area">
+      <p class="weui-msg__tips">
+        提示详情，可根据实际需要安排，如果换行则不超过规定长度，居中展现<a
+          href="javascript:"
+          >文字链接</a
+        >
+      </p>
+    </div>
+  </div>
+
+  <div class="page__ft j_bottom">
+    <a href="javascript:home()"><img src="images/icon_footer_link.png" /></a>
+  </div>
+</div>
+
+key_value场景
+<div class="weui-msg">
+  <div class="weui-msg__icon-area">
+    <i class="weui-icon-success weui-icon_msg"></i>
+  </div>
+  <div class="weui-msg__text-area">
+    <h2 class="weui-msg__title">操作成功</h2>
+    <p class="weui-msg__desc">
+      内容详情，可根据实际需要安排，如果换行则不超过规定长度，居中展现<a
+        href="javascript:"
+        >文字链接</a
+      >
+    </p>
+    <div class="weui-msg__custom-area">
+      <ul class="weui-form-preview__list">
+        <li class="weui-form-preview__item">
+          <label class="weui-form-preview__label">姓名</label>
+          <p class="weui-form-preview__value">张三</p>
+        </li>
+        <li class="weui-form-preview__item">
+          <label class="weui-form-preview__label">微信号</label>
+          <p class="weui-form-preview__value">zhangsan</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="weui-msg__opr-area">
+    <p class="weui-btn-area">
+      <a href="javascript:history.back();" class="weui-btn weui-btn_primary"
+        >推荐操作</a
+      >
+    </p>
+  </div>
+</div>
+
+描述列表场景
+<div class="page msg_custom_area_tips js_show">
+  <div class="weui-msg">
+    <div class="weui-msg__icon-area">
+      <i class="weui-icon-success weui-icon_msg"></i>
+    </div>
+    <div class="weui-msg__text-area">
+      <h2 class="weui-msg__title">操作成功</h2>
+      <p class="weui-msg__desc">
+        内容详情，可根据实际需要安排，如果换行则不超过规定长度，居中展现<a
+          href="javascript:"
+          >文字链接</a
+        >
+      </p>
+      <div class="weui-msg__custom-area">
+        <ul class="weui-list-tips">
+          <li class="weui-list-tips__item">列表提示项</li>
+          <li class="weui-list-tips__item">列表提示项</li>
+          <li class="weui-list-tips__item">列表提示项</li>
+        </ul>
+      </div>
+    </div>
+    <div class="weui-msg__opr-area">
+      <p class="weui-btn-area">
+        <a href="javascript:history.back();" class="weui-btn weui-btn_primary"
+          >推荐操作</a
+        >
+      </p>
+    </div>
+  </div>
+</div>
+
+跳转列表场景
+<div class="page msg_custom_area_cell js_show">
+  <div class="weui-msg">
+    <div class="weui-msg__icon-area">
+      <i class="weui-icon-success weui-icon_msg"></i>
+    </div>
+    <div class="weui-msg__text-area">
+      <h2 class="weui-msg__title">操作成功</h2>
+      <p class="weui-msg__desc">
+        内容详情，可根据实际需要安排，如果换行则不超过规定长度，居中展现<a
+          href="javascript:"
+          >文字链接</a
+        >
+      </p>
+      <div class="weui-msg__custom-area">
+        <div class="weui-cells__group weui-cells__group_form">
+          <div class="weui-cells">
+            <a class="weui-cell weui-cell_access" href="javascript:">
+              <div class="weui-cell__bd"><p>cell standard</p></div>
+              <div class="weui-cell__ft"></div>
+            </a>
+            <a class="weui-cell weui-cell_access" href="javascript:">
+              <div class="weui-cell__bd"><p>cell standard</p></div>
+              <div class="weui-cell__ft"></div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="weui-msg__opr-area">
+      <p class="weui-btn-area">
+        <a href="javascript:history.back();" class="weui-btn weui-btn_primary"
+          >推荐操作</a
+        >
+      </p>
+    </div>
+  </div>
+  
+</div>
+
+*/
+.weui-msg__desc a,
+.weui-msg__desc-primary a,
+.weui-msg__tips a {
+  color: #576b95;
+  color: var(--weui-LINK);
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+.weui-msg {
+  padding-top: 48px;
+  padding: calc(48px + constant(safe-area-inset-top))
+    constant(safe-area-inset-right) constant(safe-area-inset-bottom)
+    constant(safe-area-inset-left);
+  padding: calc(48px + env(safe-area-inset-top)) env(safe-area-inset-right)
+    env(safe-area-inset-bottom) env(safe-area-inset-left);
+  text-align: center;
+  line-height: 1.4;
+  min-height: 100%;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  background-color: #fff;
+  background-color: var(--weui-BG-2);
+}
+
+.weui-msg__icon-area {
+  margin-bottom: 32px;
+}
+
+.weui-msg__text-area {
+  margin-bottom: 32px;
+  padding: 0 32px;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  line-height: 1.6;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+.weui-msg__text-area:first-child {
+  padding-top: 96px;
+}
+
+.weui-msg__title {
+  margin-bottom: 16px;
+  font-weight: 400;
+  font-size: 22px;
+  color: #191919;
+  -webkit-text-stroke: 0.02em;
+}
+
+body[data-weui-theme="dark"] .weui-msg__title {
+  color: #d1d1d1;
+}
+
+@media (prefers-color-scheme: dark) {
+  body:not([data-weui-theme="light"]) .weui-msg__title {
+    color: #d1d1d1;
+  }
+}
+
+@supports (-webkit-overflow-scrolling: touch) {
+  .weui-msg__title {
+    font-weight: 500;
+    -webkit-text-stroke: initial;
+  }
+}
+
+.weui-msg__desc {
+  font-size: 17px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.9);
+  color: var(--weui-FG-0);
+  margin-bottom: 16px;
+}
+
+.weui-msg__desc-primary {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5);
+  color: var(--weui-FG-1);
+  margin-bottom: 16px;
+}
+
+.weui-msg__custom-area {
+  text-align: left;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  margin-bottom: 16px;
+}
+
+.weui-msg__title + .weui-msg__custom-area {
+  margin-top: 48px;
+}
+
+.weui-msg__desc + .weui-msg__custom-area,
+.weui-msg__desc-primary + .weui-msg__custom-area {
+  margin-top: 40px;
+}
+
+.weui-msg__custom-area .weui-cells__group_form .weui-cells:before,
+.weui-msg__custom-area .weui-cells__group_form .weui-cells:after {
+  left: 0;
+  right: 0;
+}
+
+.weui-msg__custom-area .weui-cells__group_form .weui-cell {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.weui-msg__custom-area .weui-cells__group_form .weui-cell:before {
+  left: 0;
+  right: 0;
+}
+
+.weui-msg__opr-area {
+  margin-bottom: 16px;
+}
+
+.weui-msg__opr-area .weui-btn-area {
+  margin: 0;
+}
+
+.weui-msg__opr-area .weui-btn + .weui-btn {
+  margin-bottom: 16px;
+}
+
+.weui-msg__opr-area:last-child {
+  margin-bottom: 96px;
+}
+
+.weui-msg__opr-area + .weui-msg__extra-area {
+  margin-top: 48px;
+}
+
+.weui-msg__tips-area {
+  margin-bottom: 16px;
+  padding: 0 40px;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+.weui-msg__opr-area + .weui-msg__tips-area {
+  margin-bottom: 48px;
+}
+
+.weui-msg__tips-area:last-child {
+  margin-bottom: 64px;
+}
+
+.weui-msg__tips {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.5);
+  color: var(--weui-FG-1);
+}
+
+.weui-msg__extra-area {
+  margin-bottom: 24px;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.5);
+  color: var(--weui-FG-1);
+}
+
+.weui-msg__extra-area a,
+.weui-msg__extra-area navigator {
+  color: #576b95;
+  color: var(--weui-LINK);
+}
+
+.weui-msg__extra-area navigator {
+  display: inline;
+}
+
+.weui-msg_align-top .weui-msg__text-area:first-child {
+  padding-top: 0;
+}

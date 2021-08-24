@@ -1,0 +1,819 @@
+/*
+
+表单结构
+<div class="app-form">
+  <div class="app-form__text-area">
+    <h2 class="app-form__title">表单结构</h2>
+    <div class="app-form__desc">
+      展示表单页面的信息结构样式,
+      分别由头部区域/控件区域/提示区域/操作区域和底部信息区域组成。
+    </div>
+  </div>
+  <div class="app-form__control-area">
+    <div class="app-cells__group app-cells__group_form">
+      <div class="app-cells__title">表单组标题</div>
+      <div class="app-cells app-cells_form">
+        <div class="app-cell app-cell_active">
+          <div class="app-cell__hd">
+            <label class="app-label">微信号</label>
+          </div>
+          <div class="app-cell__bd">
+            <input
+              id="js_input"
+              class="app-input"
+              placeholder="填写本人微信号"
+            />
+          </div>
+        </div>
+        <div class="app-cell app-cell_active">
+          <div class="app-cell__hd">
+            <label class="app-label">昵称</label>
+          </div>
+          <div class="app-cell__bd">
+            <input
+              id="js_input"
+              class="app-input"
+              placeholder="填写本人微信号的昵称"
+            />
+          </div>
+        </div>
+        <div class="app-cell app-cell_active">
+          <div class="app-cell__hd">
+            <label class="app-label">联系电话</label>
+          </div>
+          <div class="app-cell__bd">
+            <input
+              id="js_input"
+              class="app-input"
+              placeholder="填写绑定的电话号码"
+              type="number"
+              pattern="[0-9]*"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="app-form__tips-area">
+    <p class="app-form__tips">表单页提示，居中对齐</p>
+  </div>
+  <div class="app-form__opr-area">
+    <a
+      class="app-btn app-btn_primary app-btn_disabled"
+      href="javascript:"
+      id="showTooltips"
+      >确定</a
+    >
+  </div>
+  <div class="app-form__tips-area">
+    <p class="app-form__tips">表单页提示，居中对齐</p>
+  </div>
+  <div class="app-form__extra-area">
+    <div class="app-footer">
+      <p class="app-footer__links">
+        <a href="javascript:" class="app-footer__link">底部链接文本</a>
+      </p>
+      <p class="app-footer__text">Copyright © 2008-2019 app.io</p>
+    </div>
+  </div>
+</div>
+
+
+输入框状态
+<div class="app-form">
+  <div class="app-form__text-area">
+    <h2 class="app-form__title">输入框状态</h2>
+    <div class="app-form__desc">
+      可体验表单输入的反馈状态。显示报错信息有两种类型，一种是超过1个输入项的时候，用置顶tipsbar报错信息，告知错误原因，页面聚焦到对应的报错区域，内容标红色，另一种是在当前输入项位置报错，适用于只有1个输入项的时候，用户焦点主要是输入区域。
+    </div>
+  </div>
+  <div class="app-form__control-area">
+    <div class="app-cells__group app-cells__group_form">
+      <div class="app-cells__title">表单报错：置顶tipsbar报错信息</div>
+      <div class="app-cells app-cells_form">
+        <div class="app-cell app-cell_active" id="js_cell">
+          <div class="app-cell__hd">
+            <label class="app-label">卡号</label>
+          </div>
+          <div class="app-cell__bd app-flex">
+            <input
+              id="js_input"
+              class="app-input"
+              autofocus=""
+              type="text"
+              pattern="[0-9]*"
+              placeholder="请输入16位数卡号"
+              maxlength="16"
+            />
+            <button
+              id="js_input_clear"
+              class="app-btn_reset app-btn_icon app-btn_input-clear"
+            >
+              <i class="app-icon-clear"></i>
+            </button>
+          </div>
+        </div>
+        <div class="app-cell app-cell_active">
+          <div class="app-cell__hd">
+            <label class="app-label">持卡人</label>
+          </div>
+          <div class="app-cell__bd app-flex">
+            <input
+              class="app-input"
+              type="text"
+              placeholder="请输入持卡人姓名"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="app-cells__group app-cells__group_form">
+      <div class="app-cells__title">表单报错：当前项位置报错</div>
+      <div class="app-cells app-cells_form">
+        <div class="app-cell app-cell_active">
+          <div class="app-cell__hd">
+            <label class="app-label">金额</label>
+          </div>
+          <div class="app-cell__bd app-flex">
+            <input
+              id="js_current_input"
+              class="app-input"
+              type="text"
+              placeholder="请输入金额"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        id="js_current_tips"
+        style="display: none"
+        class="app-cells__tips app-cells__tips_warn"
+      >
+        最多支持8位数
+      </div>
+    </div>
+    <div class="app-cells__group app-cells__group_form">
+      <div class="app-cells__title">表单只读、置灰</div>
+      <div class="app-cells app-cells_form">
+        <div class="app-cell app-cell_active app-cell_readonly">
+          <div class="app-cell__hd">
+            <label class="app-label">EMail</label>
+          </div>
+          <div class="app-cell__bd">
+            <input
+              class="app-input"
+              placeholder="请输入EMail"
+              value="1234567"
+              readonly=""
+            />
+          </div>
+        </div>
+        <div class="app-cell app-cell_active app-cell_disabled">
+          <div class="app-cell__hd">
+            <label class="app-label">微信号</label>
+          </div>
+          <div class="app-cell__bd">
+            <input
+              class="app-input"
+              placeholder="请输入微信号"
+              value="app"
+              disabled=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="app-form__opr-area">
+    <a
+      class="app-btn app-btn_primary app-btn_disabled"
+      href="javascript:"
+      id="showTooltips"
+      >确定</a
+    >
+  </div>
+</div>
+
+验证码
+<div class="app-form">
+  <div class="app-form__text-area">
+    <h2 class="app-form__title">验证码</h2>
+    <div class="app-form__desc">验证手机号样式</div>
+  </div>
+  <div class="app-form__control-area">
+    <div class="app-cells__group app-cells__group_form">
+      <div class="app-cells app-cells_form">
+        <div class="app-cell app-cell_active">
+          <div class="app-cell__hd">
+            <label class="app-label">手机号</label>
+          </div>
+          <div class="app-cell__bd">
+            <input
+              class="app-input"
+              type="number"
+              pattern="[0-9]*"
+              placeholder="请输入手机号"
+              value="12345678907"
+            />
+          </div>
+          <div class="app-cell__ft">
+            <a class="app-btn_reset app-btn_icon">
+              <i id="showIOSDialog1" class="app-icon-info-circle"></i>
+            </a>
+          </div>
+        </div>
+        <div class="app-cell app-cell_active app-cell_vcode">
+          <div class="app-cell__hd">
+            <label class="app-label">验证码</label>
+          </div>
+          <div class="app-cell__bd">
+            <input
+              autofocus=""
+              class="app-input"
+              type="text"
+              pattern="[0-9]*"
+              id="js_input"
+              placeholder="输入验证码"
+              maxlength="6"
+            />
+          </div>
+          <div class="app-cell__ft">
+            <button class="app-btn app-btn_default app-vcode-btn">
+              获取验证码
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="app-cells__tips">
+        <a class="app-link" href="javascript:">收不到验证码</a>
+      </div>
+    </div>
+  </div>
+  <div class="app-form__tips-area">
+    <label id="appAgree" for="appAgreeCheckbox" class="app-agree">
+      <input
+        id="appAgreeCheckbox"
+        type="checkbox"
+        class="app-agree__checkbox"
+      /><span class="app-agree__text"
+        >阅读并同意<a href="javascript:">《相关条款》</a>
+      </span>
+    </label>
+  </div>
+  <div class="app-form__opr-area">
+    <a
+      class="app-btn app-btn_primary app-btn_disabled"
+      href="javascript:"
+      id="showTooltips"
+      >确定</a
+    >
+  </div>
+</div>
+
+复选框
+<div class="app-form">
+  <div class="app-form__text-area">
+    <h2 class="app-form__title">复选框样式展示</h2>
+  </div>
+  <div class="app-form__control-area">
+    <div class="app-cells__group app-cells__group_form">
+      <div class="app-cells app-cells_checkbox">
+        <label class="app-cell app-cell_active app-check__label" for="s11">
+          <div class="app-cell__hd">
+            <input
+              type="checkbox"
+              class="app-check"
+              name="checkbox1"
+              id="s11"
+              checked="checked"
+            />
+            <i class="app-icon-checked"></i>
+          </div>
+          <div class="app-cell__bd">
+            <p>standard is dealt for u.</p>
+          </div>
+        </label>
+        <label class="app-cell app-cell_active app-check__label" for="s12">
+          <div class="app-cell__hd">
+            <input
+              type="checkbox"
+              name="checkbox1"
+              class="app-check"
+              id="s12"
+            />
+            <i class="app-icon-checked"></i>
+          </div>
+          <div class="app-cell__bd">
+            <p>standard is dealicient for u.</p>
+          </div>
+        </label>
+        <a href="javascript:" class="app-cell app-cell_active app-cell_link">
+          <div class="app-cell__bd">添加更多</div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="app-form__opr-area">
+    <a class="app-btn app-btn_primary" href="javascript:" id="showTooltips"
+      >下一步</a
+    >
+  </div>
+  <div class="app-form__tips-area">
+    <p class="app-form__tips">
+      点击下一步即表示<a href="javascript:">同意用户协议</a>
+    </p>
+  </div>
+</div>
+
+跳转列表项
+<div class="app-form">
+  <div class="app-form__text-area">
+    <h2 class="app-form__title">跳转列表项</h2>
+  </div>
+  <div class="app-form__control-area">
+    <div class="app-cells__group app-cells__group_form">
+      <div class="app-cells">
+        <a class="app-cell app-cell_access" href="javascript:">
+          <div class="app-cell__bd"><p>cell standard</p></div>
+          <div class="app-cell__ft"></div>
+        </a>
+        <a class="app-cell app-cell_access" href="javascript:">
+          <div class="app-cell__bd"><p>cell standard</p></div>
+          <div class="app-cell__ft"></div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+单选框
+<div class="app-form">
+  <div class="app-form__text-area">
+    <h2 class="app-form__title">单选框样式展示</h2>
+  </div>
+  <div class="app-form__control-area">
+    <div class="app-cells__group app-cells__group_form">
+      <div class="app-cells app-cells_radio">
+        <label class="app-cell app-cell_active app-check__label" for="x11">
+          <div class="app-cell__bd">
+            <p>cell standard</p>
+          </div>
+          <div class="app-cell__ft">
+            <input type="radio" class="app-check" name="radio1" id="x11" />
+            <span class="app-icon-checked"></span>
+          </div>
+        </label>
+        <label class="app-cell app-cell_active app-check__label" for="x12">
+          <div class="app-cell__bd">
+            <p>cell standard</p>
+          </div>
+          <div class="app-cell__ft">
+            <input
+              type="radio"
+              name="radio1"
+              class="app-check"
+              id="x12"
+              checked="checked"
+            />
+            <span class="app-icon-checked"></span>
+          </div>
+        </label>
+        <a href="javascript:" class="app-cell app-cell_active app-cell_link">
+          <div class="app-cell__bd">添加更多</div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="app-form__opr-area">
+    <a class="app-btn app-btn_primary" href="javascript:" id="showTooltips"
+      >确定</a
+    >
+  </div>
+</div>
+
+开关
+<div class="app-form">
+  <div class="app-form__text-area">
+    <h2 class="app-form__title">开关样式展示</h2>
+  </div>
+  <div class="app-form__control-area">
+    <div class="app-cells__group app-cells__group_form">
+      <div class="app-cells app-cells_form">
+        <div class="app-cell app-cell_active app-cell_switch">
+          <div class="app-cell__bd">标题文字</div>
+          <div class="app-cell__ft">
+            <input class="app-switch" type="checkbox" />
+          </div>
+        </div>
+        <div class="app-cell app-cell_active app-cell_switch">
+          <div class="app-cell__bd">兼容IE Edge的版本</div>
+          <div class="app-cell__ft">
+            <label for="switchCP" class="app-switch-cp">
+              <input
+                id="switchCP"
+                class="app-switch-cp__input"
+                type="checkbox"
+                checked="checked"
+              />
+              <div class="app-switch-cp__box"></div>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="app-form__opr-area">
+    <a class="app-btn app-btn_primary" href="javascript:" id="showTooltips"
+      >确定</a
+    >
+  </div>
+</div>
+
+
+原生选择框
+<div class="app-form">
+  <div class="app-form__text-area">
+    <h2 class="app-form__title">原生选择框</h2>
+  </div>
+  <div class="app-form__control-area">
+    <div class="app-cells__group app-cells__group_form">
+      <div class="app-cells">
+        <div class="app-cell app-cell_active app-cell_select">
+          <div class="app-cell__bd">
+            <select class="app-select" name="select1">
+              <option selected="" value="1">微信号</option>
+              <option value="2">QQ号</option>
+              <option value="3">Email</option>
+            </select>
+          </div>
+        </div>
+        <div
+          class="app-cell app-cell_active app-cell_select app-cell_select-before"
+        >
+          <div class="app-cell__hd">
+            <select class="app-select" name="select2">
+              <option value="1">+86</option>
+              <option value="2">+80</option>
+              <option value="3">+84</option>
+              <option value="4">+87</option>
+            </select>
+          </div>
+          <div class="app-cell__bd">
+            <input
+              class="app-input"
+              type="number"
+              pattern="[0-9]*"
+              placeholder="请输入号码"
+              value="12345678907"
+            />
+          </div>
+        </div>
+        <div
+          class="app-cell app-cell_active app-cell_select app-cell_select-after"
+        >
+          <div class="app-cell__hd">
+            <label for="" class="app-label">国家</label>
+          </div>
+          <div class="app-cell__bd">
+            <select class="app-select" name="select2">
+              <option value="1">中国</option>
+              <option value="2">美国</option>
+              <option value="3">英国</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="app-form__opr-area">
+    <a class="app-btn app-btn_primary" href="javascript:" id="showTooltips"
+      >确定</a
+    >
+  </div>
+</div>
+
+模拟选择框
+<div class="app-form">
+  <div class="app-form__text-area">
+    <h2 class="app-form__title">模拟选择框</h2>
+    <div class="app-form__desc">用于丰富原生选择框结构，使其更具有扩展性</div>
+  </div>
+  <div class="app-form__control-area">
+    <div class="app-cells__group app-cells__group_form">
+      <div class="app-cells">
+        <div
+          class="app-cell app-cell_active app-cell_access"
+          id="showDatePicker"
+        >
+          <div class="app-cell__bd">日期</div>
+          <div class="app-cell__ft"></div>
+        </div>
+        <div
+          class="app-cell app-cell_active app-cell_access app-cell_select app-cell_select-before"
+        >
+          <div class="app-cell__hd" id="showPhone">
+            <label class="app-label">+86</label>
+          </div>
+          <div class="app-cell__bd">
+            <input
+              class="app-input"
+              type="number"
+              pattern="[0-9]*"
+              placeholder="请输入号码"
+              value="12345678907"
+            />
+          </div>
+        </div>
+        <div
+          class="app-cell app-cell_active app-cell_access app-cell_select app-cell_select-after"
+        >
+          <div class="app-cell__hd">
+            <label class="app-label">票种</label>
+          </div>
+          <div class="app-cell__bd" id="showPicker">的士票</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+文本域
+<div class="app-form">
+  <div class="app-form__text-area">
+    <h2 class="app-form__title">文本域</h2>
+    <div class="app-form__desc">输入更多内容的输入区域样式展示</div>
+  </div>
+  <div class="app-form__control-area">
+    <div class="app-cells__group app-cells__group_form">
+      <div class="app-cells__title">问题描述</div>
+      <div class="app-cells app-cells_form">
+        <div class="app-cell">
+          <div class="app-cell__bd">
+            <textarea
+              class="app-textarea"
+              placeholder="请描述你所发生的问题"
+              rows="3"
+            ></textarea>
+            <div class="app-textarea-counter"><span>0</span>/200</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="app-form__opr-area">
+    <a class="app-btn app-btn_primary" href="javascript:" id="showTooltips"
+      >确定</a
+    >
+  </div>
+</div>
+
+
+
+*/
+
+.app-form {
+  padding: 56px 0 0;
+  padding: calc(56px + constant(safe-area-inset-top))
+    constant(safe-area-inset-right) constant(safe-area-inset-bottom)
+    constant(safe-area-inset-left);
+  padding: calc(56px + env(safe-area-inset-top)) env(safe-area-inset-right)
+    env(safe-area-inset-bottom) env(safe-area-inset-left);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  line-height: 1.4;
+  min-height: 100%;
+  box-sizing: border-box;
+  background-color: #fff;
+  background-color: var(--app-BG-2);
+}
+
+.app-form .app-footer,
+.app-form .app-footer__link {
+  font-size: 14px;
+}
+
+.app-form .app-agree {
+  padding: 0;
+}
+
+.app-form__text-area {
+  padding: 0 32px;
+  color: rgba(0, 0, 0, 0.9);
+  color: var(--app-FG-0);
+  text-align: center;
+}
+
+.app-form__control-area {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  margin: 48px 0;
+}
+
+.app-form__tips-area {
+  overflow: hidden;
+}
+
+.app-form__tips-area,
+.app-form__extra-area {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.app-form__opr-area {
+  margin-bottom: 64px;
+}
+
+.app-form__opr-area:last-child {
+  margin-bottom: 96px;
+}
+
+.app-form__title {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.36;
+}
+
+.app-form__desc {
+  font-size: 17px;
+  margin-top: 16px;
+}
+
+.app-form__tips {
+  color: rgba(0, 0, 0, 0.5);
+  color: var(--app-FG-1);
+  font-size: 14px;
+}
+
+.app-form__tips a,
+.app-form__tips navigator {
+  color: #576b95;
+  color: var(--app-LINK);
+}
+
+.app-form__tips navigator {
+  display: inline;
+}
+
+
+.weui-agree {
+  display: block;
+  padding: 8px 15px 0;
+  font-size: 14px;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.weui-agree a,.weui-agree navigator {
+  color: #576b95;
+  color: var(--weui-LINK);
+}
+
+.weui-agree navigator {
+  display: inline;
+}
+
+.weui-agree__text {
+  color: rgba(0,0,0,0.5);
+  color: var(--weui-FG-1);
+  margin-left: 2px;
+}
+
+.weui-agree__checkbox {
+  -webkit-appearance: none;
+  appearance: none;
+  display: inline-block;
+  border: 0;
+  outline: 0;
+  vertical-align: middle;
+  background-color: currentColor;
+  -webkit-mask-position: 0 0;
+  mask-position: 0 0;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-image: url(data:image/svg+xml,%3Csvg%20width%3D%221000%22%20height%3D%221000%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M500%20916.667C269.881%20916.667%2083.333%20730.119%2083.333%20500%2083.333%20269.881%20269.881%2083.333%20500%2083.333c230.119%200%20416.667%20186.548%20416.667%20416.667%200%20230.119-186.548%20416.667-416.667%20416.667zm0-50c202.504%200%20366.667-164.163%20366.667-366.667%200-202.504-164.163-366.667-366.667-366.667-202.504%200-366.667%20164.163-366.667%20366.667%200%20202.504%20164.163%20366.667%20366.667%20366.667z%22%20fill-rule%3D%22evenodd%22%20fill-opacity%3D%22.9%22%2F%3E%3C%2Fsvg%3E);
+  mask-image: url(data:image/svg+xml,%3Csvg%20width%3D%221000%22%20height%3D%221000%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M500%20916.667C269.881%20916.667%2083.333%20730.119%2083.333%20500%2083.333%20269.881%20269.881%2083.333%20500%2083.333c230.119%200%20416.667%20186.548%20416.667%20416.667%200%20230.119-186.548%20416.667-416.667%20416.667zm0-50c202.504%200%20366.667-164.163%20366.667-366.667%200-202.504-164.163-366.667-366.667-366.667-202.504%200-366.667%20164.163-366.667%20366.667%200%20202.504%20164.163%20366.667%20366.667%20366.667z%22%20fill-rule%3D%22evenodd%22%20fill-opacity%3D%22.9%22%2F%3E%3C%2Fsvg%3E);
+  color: rgba(0,0,0,0.3);
+  color: var(--weui-FG-2);
+  width: 1em;
+  height: 1em;
+  font-size: 17px;
+  margin-top: -0.2em;
+}
+
+.weui-agree__checkbox-check {
+  position: absolute;
+  left: -9999px;
+}
+
+.weui-agree__checkbox:checked,.weui-agree__checkbox-check[aria-checked="true"]+.weui-agree__checkbox {
+  -webkit-mask-image: url(data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M12%2022C6.477%2022%202%2017.523%202%2012S6.477%202%2012%202s10%204.477%2010%2010-4.477%2010-10%2010zm-1.177-7.86l-2.765-2.767L7%2012.431l3.119%203.121a1%201%200%20001.414%200l5.952-5.95-1.062-1.062-5.6%205.6z%22%2F%3E%3C%2Fsvg%3E);
+  mask-image: url(data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M12%2022C6.477%2022%202%2017.523%202%2012S6.477%202%2012%202s10%204.477%2010%2010-4.477%2010-10%2010zm-1.177-7.86l-2.765-2.767L7%2012.431l3.119%203.121a1%201%200%20001.414%200l5.952-5.95-1.062-1.062-5.6%205.6z%22%2F%3E%3C%2Fsvg%3E);
+  color: #07c160;
+  color: var(--weui-BRAND);
+}
+
+.weui-agree_animate {
+  -webkit-animation: weuiAgree 0.3s 1;
+  animation: weuiAgree 0.3s 1;
+}
+
+@-webkit-keyframes weuiAgree {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  16% {
+    -webkit-transform: translateX(-8px);
+    transform: translateX(-8px);
+  }
+
+  28% {
+    -webkit-transform: translateX(-16px);
+    transform: translateX(-16px);
+  }
+
+  44% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  59% {
+    -webkit-transform: translateX(-16px);
+    transform: translateX(-16px);
+  }
+
+  73% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  82% {
+    -webkit-transform: translateX(16px);
+    transform: translateX(16px);
+  }
+
+  94% {
+    -webkit-transform: translateX(8px);
+    transform: translateX(8px);
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes weuiAgree {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  16% {
+    -webkit-transform: translateX(-8px);
+    transform: translateX(-8px);
+  }
+
+  28% {
+    -webkit-transform: translateX(-16px);
+    transform: translateX(-16px);
+  }
+
+  44% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  59% {
+    -webkit-transform: translateX(-16px);
+    transform: translateX(-16px);
+  }
+
+  73% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  82% {
+    -webkit-transform: translateX(16px);
+    transform: translateX(16px);
+  }
+
+  94% {
+    -webkit-transform: translateX(8px);
+    transform: translateX(8px);
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}

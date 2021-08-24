@@ -1,0 +1,101 @@
+/*
+<div class="app-footer">
+  <p class="app-footer__text">Copyright © 2008-2016 app.io</p>
+</div>
+<br />
+<br />
+<div class="app-footer">
+  <p class="app-footer__links">
+    <a href="javascript:" class="app-footer__link">底部链接</a>
+  </p>
+  <p class="app-footer__text">Copyright © 2008-2016 app.io</p>
+</div>
+<br />
+<br />
+<div class="app-footer">
+  <p class="app-footer__links">
+    <a href="javascript:" class="app-footer__link">底部链接</a>
+    <a href="javascript:" class="app-footer__link">底部链接</a>
+  </p>
+  <p class="app-footer__text">Copyright © 2008-2016 app.io</p>
+</div>
+<div class="app-footer app-footer_fixed-bottom">
+  <p class="app-footer__links">
+    <a href="javascript:home();" class="app-footer__link">app首页</a>
+  </p>
+  <p class="app-footer__text">Copyright © 2008-2016 app.io</p>
+</div>
+*/
+.app-footer {
+  color: rgba(0, 0, 0, 0.3);
+  color: var(--app-FG-2);
+  font-size: 14px;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.app-footer a,
+.app-footer navigator {
+  color: #576b95;
+  color: var(--app-LINK);
+}
+
+.app-footer navigator {
+  display: inline;
+}
+
+.app-footer_fixed-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-bottom: calc(16px + constant(safe-area-inset-bottom));
+  padding-bottom: calc(16px + env(safe-area-inset-bottom));
+  left: constant(safe-area-inset-left);
+  left: env(safe-area-inset-left);
+  right: constant(safe-area-inset-right);
+  right: env(safe-area-inset-right);
+}
+
+.app-footer__links {
+  font-size: 0;
+}
+
+.app-footer__link {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 8px;
+  position: relative;
+  font-size: 14px;
+}
+
+.app-footer__link:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  bottom: 0;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  border-left: 1px solid var(--app-FG-3);
+  color: rgba(0, 0, 0, 0.1);
+  color: var(--app-FG-3);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleX(0.5);
+  transform: scaleX(0.5);
+  left: -8px;
+  top: 0.36em;
+  bottom: 0.36em;
+}
+
+.app-footer__link:first-child:before {
+  display: none;
+}
+
+.app-footer__text {
+  padding: 0 16px;
+  font-size: 12px;
+}

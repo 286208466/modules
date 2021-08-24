@@ -1,0 +1,82 @@
+/*
+
+<div class="app-slider">
+  <div class="app-slider__inner">
+    <div style="width: 0" class="app-slider__track"></div>
+    <div style="left: 0" class="app-slider__handler"></div>
+  </div>
+</div>
+
+<div class="app-slider-box">
+  <div class="app-slider">
+    <div id="sliderInner" class="app-slider__inner">
+      <div id="sliderTrack" style="width: 50%" class="app-slider__track"></div>
+      <div
+        id="sliderHandler"
+        style="left: 50%"
+        class="app-slider__handler"
+      ></div>
+    </div>
+  </div>
+  <div id="sliderValue" class="app-slider-box__value">50</div>
+</div>
+
+*/
+
+.app-slider {
+  padding: 15px 18px;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.app-slider__inner {
+  position: relative;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.1);
+  background-color: var(--app-FG-3);
+}
+
+.app-slider__track {
+  height: 2px;
+  background-color: #07c160;
+  background-color: var(--app-BRAND);
+  width: 0;
+}
+
+.app-slider__handler {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 28px;
+  height: 28px;
+  margin-left: -14px;
+  margin-top: -14px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 4px var(--app-FG-3);
+}
+
+.app-slider-box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.app-slider-box .app-slider {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+.app-slider-box__value {
+  margin-left: 0.5em;
+  min-width: 24px;
+  color: rgba(0, 0, 0, 0.5);
+  color: var(--app-FG-1);
+  text-align: center;
+  font-size: 14px;
+}

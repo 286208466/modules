@@ -1,0 +1,170 @@
+/*
+
+点击的时候添加class="app-search-bar-focusing"
+
+<div class="app-search-bar" id="searchBar">
+  <form class="app-search-bar__form">
+    <div class="app-search-bar__box">
+      <i class="app-icon-search"></i>
+      <input
+        type="search"
+        class="app-search-bar__input"
+        id="searchInput"
+        placeholder="搜索"
+        required=""
+      />
+      <a href="javascript:" class="app-icon-clear" id="searchClear"></a>
+    </div>
+    <label
+      class="app-search-bar__label"
+      id="searchText"
+      style="transform-origin: 0px 0px; opacity: 1; transform: scale(1, 1)"
+    >
+      <i class="app-icon-search"></i>
+      <span>搜索</span>
+    </label>
+  </form>
+  <a href="javascript:" class="app-search-bar__cancel-btn" id="searchCancel"
+    >取消</a
+  >
+</div>
+*/
+.app-search-bar {
+  position: relative;
+  padding: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  box-sizing: border-box;
+  background-color: #ededed;
+  background-color: var(--app-BG-0);
+  -webkit-text-size-adjust: 100%;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.app-search-bar.app-search-bar_focusing .app-search-bar__cancel-btn {
+  display: block;
+}
+
+.app-search-bar.app-search-bar_focusing .app-search-bar__label {
+  display: none;
+}
+
+.app-search-bar .app-icon-search {
+  width: 16px;
+  height: 16px;
+}
+
+.app-search-bar__form {
+  position: relative;
+  -webkit-box-flex: 1;
+  -webkit-flex: auto;
+  flex: auto;
+  background-color: #fff;
+  background-color: var(--app-BG-2);
+  border-radius: 4px;
+}
+
+.app-search-bar__box {
+  position: relative;
+  padding-left: 28px;
+  padding-right: 32px;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.app-search-bar__box .app-search-bar__input {
+  padding: 8px 0;
+  width: 100%;
+  height: 1.14285714em;
+  border: 0;
+  font-size: 14px;
+  line-height: 1.14285714em;
+  box-sizing: content-box;
+  background: transparent;
+  caret-color: #07c160;
+  caret-color: var(--app-BRAND);
+  color: rgba(0, 0, 0, 0.9);
+  color: var(--app-FG-0);
+}
+
+.app-search-bar__box .app-search-bar__input:focus {
+  outline: none;
+}
+
+.app-search-bar__box .app-icon-search {
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  margin-top: -8px;
+}
+
+.app-search-bar__box .app-icon-clear {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -16px;
+  padding: 8px;
+  width: 16px;
+  height: 16px;
+  -webkit-mask-size: 16px;
+  mask-size: 16px;
+}
+
+.app-search-bar__label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  font-size: 0;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  color: rgba(0, 0, 0, 0.5);
+  color: var(--app-FG-1);
+  background: #fff;
+  background: var(--app-BG-2);
+}
+
+.app-search-bar__label span {
+  display: inline-block;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+.app-search-bar__label .app-icon-search {
+  margin-right: 4px;
+}
+
+.app-search-bar__cancel-btn {
+  display: none;
+  margin-left: 8px;
+  line-height: 28px;
+  color: #576b95;
+  color: var(--app-LINK);
+  white-space: nowrap;
+}
+
+.app-search-bar__input:not(:valid) + .app-icon-clear {
+  display: none;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}

@@ -1,0 +1,214 @@
+/*
+
+<div class="app-gallery" id="gallery">
+  <span class="app-gallery__img" id="galleryImg"></span>
+  <div class="app-gallery__opr">
+    <a href="javascript:" class="app-gallery__del">
+      <i class="app-icon-delete app-icon_gallery-delete"></i>
+    </a>
+  </div>
+</div>
+
+<div class="app-cells app-cells_form">
+  <div class="app-cell app-cell_uploader">
+    <div class="app-cell__bd">
+      <div class="app-uploader">
+        <div class="app-uploader__hd">
+          <p class="app-uploader__title">图片上传</p>
+          <div class="app-uploader__info">0/2</div>
+        </div>
+        <div class="app-uploader__bd">
+          <ul class="app-uploader__files" id="uploaderFiles">
+            <li
+              class="app-uploader__file"
+              style="background-image: url(./images/pic_160.png)"
+            ></li>
+            <li
+              class="app-uploader__file"
+              style="background-image: url(./images/pic_160.png)"
+            ></li>
+            <li
+              class="app-uploader__file"
+              style="background-image: url(./images/pic_160.png)"
+            ></li>
+            <li
+              class="app-uploader__file app-uploader__file_status"
+              style="background-image: url(./images/pic_160.png)"
+            >
+              <div class="app-uploader__file-content">
+                <i class="app-icon-warn"></i>
+              </div>
+            </li>
+            <li
+              class="app-uploader__file app-uploader__file_status"
+              style="background-image: url(./images/pic_160.png)"
+            >
+              <div class="app-uploader__file-content">50%</div>
+            </li>
+          </ul>
+          <div class="app-uploader__input-box">
+            <input
+              id="uploaderInput"
+              class="app-uploader__input"
+              type="file"
+              accept="image/*"
+              multiple=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+*/
+
+.app-uploader {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+.app-uploader__hd {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  padding-bottom: 16px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.app-uploader__title {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+.app-uploader__info {
+  color: rgba(0, 0, 0, 0.3);
+  color: var(--app-FG-2);
+}
+
+.app-uploader__bd {
+  margin-bottom: -8px;
+  margin-right: -8px;
+  overflow: hidden;
+}
+
+.app-uploader__files {
+  list-style: none;
+}
+
+.app-uploader__file {
+  float: left;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  width: 96px;
+  height: 96px;
+  background: no-repeat center center;
+  background-size: cover;
+}
+
+.app-uploader__file_status {
+  position: relative;
+}
+
+.app-uploader__file_status:before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.app-uploader__file_status .app-uploader__file-content {
+  display: block;
+}
+
+.app-uploader__file-content {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #fff;
+  color: var(--app-WHITE);
+}
+
+.app-uploader__file-content .app-icon-warn {
+  display: inline-block;
+}
+
+.app-uploader__input-box {
+  float: left;
+  position: relative;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  width: 96px;
+  height: 96px;
+  box-sizing: border-box;
+  background-color: #ededed;
+}
+
+body[data-app-theme="dark"] .app-uploader__input-box {
+  background-color: #2e2e2e;
+}
+
+@media (prefers-color-scheme: dark) {
+  body:not([data-app-theme="light"]) .app-uploader__input-box {
+    background-color: #2e2e2e;
+  }
+}
+
+.app-uploader__input-box:before,
+.app-uploader__input-box:after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: #a3a3a3;
+}
+
+body[data-app-theme="dark"] .app-uploader__input-box:before,
+body[data-app-theme="dark"] .app-uploader__input-box:after {
+  background-color: #6d6d6d;
+}
+
+@media (prefers-color-scheme: dark) {
+  body:not([data-app-theme="light"]) .app-uploader__input-box:before,
+  body:not([data-app-theme="light"]) .app-uploader__input-box:after {
+    background-color: #6d6d6d;
+  }
+}
+
+.app-uploader__input-box:before {
+  width: 2px;
+  height: 32px;
+}
+
+.app-uploader__input-box:after {
+  width: 32px;
+  height: 2px;
+}
+
+.app-uploader__input-box:active:before,
+.app-uploader__input-box:active:after {
+  opacity: 0.7;
+}
+
+.app-uploader__input {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}

@@ -1,0 +1,211 @@
+body {
+  --app-BTN-DISABLED-FONT-COLOR: rgba(0, 0, 0, 0.2);
+}
+
+body[data-app-theme="dark"] {
+  --app-BTN-DISABLED-FONT-COLOR: rgba(255, 255, 255, 0.2);
+}
+
+@media (prefers-color-scheme: dark) {
+  body:not([data-app-theme="light"]) {
+    --app-BTN-DISABLED-FONT-COLOR: rgba(255, 255, 255, 0.2);
+  }
+}
+
+body {
+  --app-BTN-DEFAULT-BG: #f2f2f2;
+}
+
+body[data-app-theme="dark"] {
+  --app-BTN-DEFAULT-BG: rgba(255, 255, 255, 0.08);
+}
+
+@media (prefers-color-scheme: dark) {
+  body:not([data-app-theme="light"]) {
+    --app-BTN-DEFAULT-BG: rgba(255, 255, 255, 0.08);
+  }
+}
+
+body {
+  --app-BTN-DEFAULT-COLOR: #06ae56;
+}
+
+body[data-app-theme="dark"] {
+  --app-BTN-DEFAULT-COLOR: rgba(255, 255, 255, 0.8);
+}
+
+@media (prefers-color-scheme: dark) {
+  body:not([data-app-theme="light"]) {
+    --app-BTN-DEFAULT-COLOR: rgba(255, 255, 255, 0.8);
+  }
+}
+
+body {
+  --app-BTN-DEFAULT-ACTIVE-BG: #e6e6e6;
+}
+
+body[data-app-theme="dark"] {
+  --app-BTN-DEFAULT-ACTIVE-BG: rgba(255, 255, 255, 0.126);
+}
+
+@media (prefers-color-scheme: dark) {
+  body:not([data-app-theme="light"]) {
+    --app-BTN-DEFAULT-ACTIVE-BG: rgba(255, 255, 255, 0.126);
+  }
+}
+
+body {
+  --app-DIALOG-LINE-COLOR: rgba(0, 0, 0, 0.1);
+}
+
+body[data-app-theme="dark"] {
+  --app-DIALOG-LINE-COLOR: rgba(255, 255, 255, 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+  body:not([data-app-theme="light"]) {
+    --app-DIALOG-LINE-COLOR: rgba(255, 255, 255, 0.1);
+  }
+}
+
+input,
+textarea {
+  caret-color: #07c160;
+  caret-color: var(--app-BRAND);
+}
+
+::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+  color: var(--app-FG-2);
+}
+
+::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+  color: var(--app-FG-2);
+}
+body {
+  --app-BG-0: #ededed;
+  --app-BG-1: #f7f7f7;
+  --app-BG-2: #fff;
+  --app-BG-3: #f7f7f7;
+  --app-BG-4: #4c4c4c;
+  --app-BG-5: #fff;
+  --app-FG-0: rgba(0, 0, 0, 0.9);
+  --app-FG-HALF: rgba(0, 0, 0, 0.9);
+  --app-FG-1: rgba(0, 0, 0, 0.5);
+  --app-FG-2: rgba(0, 0, 0, 0.3);
+  --app-FG-3: rgba(0, 0, 0, 0.1);
+  --app-RED: #fa5151;
+  --app-ORANGE: #fa9d3b;
+  --app-YELLOW: #ffc300;
+  --app-GREEN: #91d300;
+  --app-LIGHTGREEN: #95ec69;
+  --app-BRAND: #07c160;
+  --app-BLUE: #10aeff;
+  --app-INDIGO: #1485ee;
+  --app-PURPLE: #6467f0;
+  --app-WHITE: #fff;
+  --app-LINK: #576b95;
+  --app-LINK-ACTIVE: rgba(87, 107, 149, 0.5);
+  --app-TEXTGREEN: #06ae56;
+  --app-FG: black;
+  --app-BG: white;
+  --app-TAG-TEXT-ORANGE: #fa9d3b;
+  --app-TAG-BACKGROUND-ORANGE: rgba(250, 157, 59, 0.1);
+  --app-TAG-TEXT-GREEN: #06ae56;
+  --app-TAG-BACKGROUND-GREEN: rgba(6, 174, 86, 0.1);
+  --app-TAG-TEXT-BLUE: #10aeff;
+  --app-TAG-BACKGROUND-BLUE: rgba(16, 174, 255, 0.1);
+  --app-TAG-TEXT-BLACK: rgba(0, 0, 0, 0.5);
+  --app-TAG-BACKGROUND-BLACK: rgba(0, 0, 0, 0.05);
+}
+
+@media (prefers-color-scheme: dark) {
+  body:not([data-app-theme="light"]) {
+    --app-BG-0: #111111;
+    --app-BG-1: #1e1e1e;
+    --app-BG-2: #191919;
+    --app-BG-3: #202020;
+    --app-BG-4: #404040;
+    --app-BG-5: #2c2c2c;
+    --app-FG-0: rgba(255, 255, 255, 0.8);
+    --app-FG-HALF: rgba(255, 255, 255, 0.6);
+    --app-FG-1: rgba(255, 255, 255, 0.5);
+    --app-FG-2: rgba(255, 255, 255, 0.3);
+    --app-FG-3: rgba(255, 255, 255, 0.05);
+    --app-RED: #fa5151;
+    --app-ORANGE: #c87d2f;
+    --app-YELLOW: #cc9c00;
+    --app-GREEN: #74a800;
+    --app-LIGHTGREEN: #3eb575;
+    --app-BRAND: #07c160;
+    --app-BLUE: #10aeff;
+    --app-INDIGO: #1196ff;
+    --app-PURPLE: #8183ff;
+    --app-WHITE: rgba(255, 255, 255, 0.8);
+    --app-LINK: #7d90a9;
+    --app-LINK-ACTIVE: rgba(125, 144, 169, 0.5);
+    --app-TEXTGREEN: #259c5c;
+    --app-FG: white;
+    --app-BG: black;
+    --app-TAG-TEXT-ORANGE: rgba(250, 157, 59, 0.6);
+    --app-TAG-BACKGROUND-ORANGE: rgba(250, 157, 59, 0.1);
+    --app-TAG-TEXT-GREEN: rgba(6, 174, 86, 0.6);
+    --app-TAG-BACKGROUND-GREEN: rgba(6, 174, 86, 0.1);
+    --app-TAG-TEXT-BLUE: rgba(16, 174, 255, 0.6);
+    --app-TAG-BACKGROUND-BLUE: rgba(16, 174, 255, 0.1);
+    --app-TAG-TEXT-BLACK: rgba(255, 255, 255, 0.5);
+    --app-TAG-BACKGROUND-BLACK: rgba(255, 255, 255, 0.05);
+  }
+}
+
+body[data-app-theme="dark"] {
+  --app-BG-0: #111111;
+  --app-BG-1: #1e1e1e;
+  --app-BG-2: #191919;
+  --app-BG-3: #202020;
+  --app-BG-4: #404040;
+  --app-BG-5: #2c2c2c;
+  --app-FG-0: rgba(255, 255, 255, 0.8);
+  --app-FG-HALF: rgba(255, 255, 255, 0.6);
+  --app-FG-1: rgba(255, 255, 255, 0.5);
+  --app-FG-2: rgba(255, 255, 255, 0.3);
+  --app-FG-3: rgba(255, 255, 255, 0.05);
+  --app-RED: #fa5151;
+  --app-ORANGE: #c87d2f;
+  --app-YELLOW: #cc9c00;
+  --app-GREEN: #74a800;
+  --app-LIGHTGREEN: #3eb575;
+  --app-BRAND: #07c160;
+  --app-BLUE: #10aeff;
+  --app-INDIGO: #1196ff;
+  --app-PURPLE: #8183ff;
+  --app-WHITE: rgba(255, 255, 255, 0.8);
+  --app-LINK: #7d90a9;
+  --app-LINK-ACTIVE: rgba(125, 144, 169, 0.5);
+  --app-TEXTGREEN: #259c5c;
+  --app-FG: white;
+  --app-BG: black;
+  --app-TAG-TEXT-ORANGE: rgba(250, 157, 59, 0.6);
+  --app-TAG-BACKGROUND-ORANGE: rgba(250, 157, 59, 0.1);
+  --app-TAG-TEXT-GREEN: rgba(6, 174, 86, 0.6);
+  --app-TAG-BACKGROUND-GREEN: rgba(6, 174, 86, 0.1);
+  --app-TAG-TEXT-BLUE: rgba(16, 174, 255, 0.6);
+  --app-TAG-BACKGROUND-BLUE: rgba(16, 174, 255, 0.1);
+  --app-TAG-TEXT-BLACK: rgba(255, 255, 255, 0.5);
+  --app-TAG-BACKGROUND-BLACK: rgba(255, 255, 255, 0.05);
+}
+
+body {
+  --app-BG-COLOR-ACTIVE: #ececec;
+}
+
+body[data-app-theme="dark"] {
+  --app-BG-COLOR-ACTIVE: #373737;
+}
+
+@media (prefers-color-scheme: dark) {
+  body:not([data-app-theme="light"]) {
+    --app-BG-COLOR-ACTIVE: #373737;
+  }
+}

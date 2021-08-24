@@ -1,0 +1,147 @@
+/*
+<div class="app-tab">
+  <div class="app-tab__panel"></div>
+  <div class="app-tabbar">
+    <div class="app-tabbar__item app-bar__item_on">
+      <div style="display: inline-block; position: relative">
+        <img src="./images/icon_tabbar.png" alt="" class="app-tabbar__icon" />
+        <span
+          class="app-badge"
+          style="position: absolute; top: -2px; right: -13px"
+          >8</span
+        >
+      </div>
+      <p class="app-tabbar__label">微信</p>
+    </div>
+    <div class="app-tabbar__item">
+      <img src="./images/icon_tabbar.png" alt="" class="app-tabbar__icon" />
+      <p class="app-tabbar__label">通讯录</p>
+    </div>
+    <div class="app-tabbar__item">
+      <div style="display: inline-block; position: relative">
+        <img src="./images/icon_tabbar.png" alt="" class="app-tabbar__icon" />
+        <span
+          class="app-badge app-badge_dot"
+          style="position: absolute; top: 0; right: -6px"
+        ></span>
+      </div>
+      <p class="app-tabbar__label">发现</p>
+    </div>
+    <div class="app-tabbar__item">
+      <img src="./images/icon_tabbar.png" alt="" class="app-tabbar__icon" />
+      <p class="app-tabbar__label">我</p>
+    </div>
+  </div>
+</div>
+
+*/
+
+.app-tabbar {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  position: relative;
+  z-index: 500;
+  background-color: #f7f7f7;
+  background-color: var(--app-BG-1);
+}
+
+.app-tabbar:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 1px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid var(--app-FG-3);
+  color: rgba(0, 0, 0, 0.1);
+  color: var(--app-FG-3);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+
+.app-tabbar__item {
+  display: block;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  padding: 8px 0;
+  padding-bottom: calc(8px + constant(safe-area-inset-bottom));
+  padding-bottom: calc(8px + env(safe-area-inset-bottom));
+  font-size: 0;
+  color: rgba(0, 0, 0, 0.5);
+  color: var(--app-FG-1);
+  text-align: center;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.app-tabbar__item:first-child {
+  padding-left: constant(safe-area-inset-left);
+  padding-left: env(safe-area-inset-left);
+}
+
+.app-tabbar__item:last-child {
+  padding-right: constant(safe-area-inset-right);
+  padding-right: env(safe-area-inset-right);
+}
+
+.app-tabbar__item.app-bar__item_on .app-tabbar__icon,
+.app-tabbar__item.app-bar__item_on .app-tabbar__icon > i,
+.app-tabbar__item.app-bar__item_on .app-tabbar__label {
+  color: #07c160;
+  color: var(--app-BRAND);
+}
+
+.app-tabbar__icon {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  margin-bottom: 2px;
+}
+
+i.app-tabbar__icon,
+.app-tabbar__icon > i {
+  font-size: 24px;
+  color: rgba(0, 0, 0, 0.5);
+  color: var(--app-FG-1);
+}
+
+.app-tabbar__icon img {
+  width: 100%;
+  height: 100%;
+}
+
+.app-tabbar__label {
+  color: rgba(0, 0, 0, 0.9);
+  color: var(--app-FG-0);
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+.app-tab {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  height: 100%;
+  box-sizing: border-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+.app-tab__panel {
+  box-sizing: border-box;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.app-tab__content {
+  display: none;
+}

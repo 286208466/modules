@@ -1,0 +1,87 @@
+/*
+
+<div
+  class="app-toptips app-toptips_warn"
+  id="topTips"
+  style="display: block; opacity: 1"
+>
+  错误提示
+</div>
+
+*/
+.app-toptips {
+  display: none;
+  position: fixed;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  top: 8px;
+  left: 8px;
+  right: 8px;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  text-align: center;
+  color: #fff;
+  z-index: 5000;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.app-toptips_warn {
+  background-color: #fa5151;
+  background-color: var(--app-RED);
+}
+
+.app-list-tips {
+  list-style: none;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  line-height: 1.4;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5);
+  color: var(--app-FG-1);
+  position: relative;
+}
+
+.app-list-tips:before {
+  content: "";
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 1px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid var(--app-FG-3);
+  color: rgba(0, 0, 0, 0.1);
+  color: var(--app-FG-3);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+
+.app-list-tips:last-child {
+  padding-bottom: 0;
+}
+
+.app-list-tips__item {
+  position: relative;
+  padding-left: 15px;
+  margin: 16px 0;
+}
+
+.app-list-tips__item:before {
+  content: "\2022";
+  position: absolute;
+  left: 0;
+  top: -0.1em;
+}
+
+.app-list-tips__item:first-child {
+  margin-top: 0;
+}
+
+.app-form-preview__list + .app-list-tips > .app-list-tips__item:first-child {
+  margin-top: 6px;
+}

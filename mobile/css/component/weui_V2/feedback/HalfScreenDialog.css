@@ -1,0 +1,249 @@
+/*
+
+样式一
+<div
+  id="js_dialog_1"
+  class="app-half-screen-dialog app-half-screen-dialog_show"
+>
+  <div class="app-half-screen-dialog__hd">
+    <div class="app-half-screen-dialog__hd__side">
+      <button class="app-icon-btn">
+        关闭<i class="app-icon-close-thin"></i>
+      </button>
+    </div>
+    <div class="app-half-screen-dialog__hd__main">
+      <strong class="app-half-screen-dialog__title">标题</strong>
+    </div>
+  </div>
+  <div class="app-half-screen-dialog__bd">
+    可放自定义内容
+  </div>
+</div>
+
+样式二
+<div
+  id="js_dialog_2"
+  class="app-half-screen-dialog app-half-screen-dialog_show"
+>
+  <div class="app-half-screen-dialog__hd">
+    <div class="app-half-screen-dialog__hd__side">
+      <button style="display: none" class="app-icon-btn">
+        返回<i class="app-icon-back-arrow-thin"></i>
+      </button>
+      <button class="app-icon-btn">
+        关闭<i class="app-icon-close-thin"></i>
+      </button>
+    </div>
+    <div class="app-half-screen-dialog__hd__main">
+      <strong class="app-half-screen-dialog__title">标题</strong>
+      <span class="app-half-screen-dialog__subtitle">标题</span>
+    </div>
+    <div class="app-half-screen-dialog__hd__side">
+      <button class="app-icon-btn">更多<i class="app-icon-more"></i></button>
+    </div>
+  </div>
+  <div class="app-half-screen-dialog__bd">
+    <p class="app-half-screen-dialog__desc">
+      辅助描述内容，可根据实际需要安排
+    </p>
+    <p class="app-half-screen-dialog__tips">
+      辅助提示内容，可根据实际需要安排
+    </p>
+  </div>
+  <div class="app-half-screen-dialog__ft">
+    <a href="javascript:" class="app-btn app-btn_default">辅助操作</a>
+    <a href="javascript:" class="app-btn app-btn_primary">主操作</a>
+  </div>
+</div>
+
+
+样式三
+<div
+  id="js_dialog_3"
+  class="app-half-screen-dialog app-half-screen-dialog_show"
+>
+  <div class="app-half-screen-dialog__hd">
+    <div class="app-half-screen-dialog__hd__main">
+      <div class="app-flex" style="align-items: center">
+        <img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII="
+          alt=""
+          style="
+            width: 24px;
+            margin-right: 8px;
+            border-radius: 50%;
+            display: block;
+          "
+        />
+        昵称
+      </div>
+    </div>
+  </div>
+  <div class="app-half-screen-dialog__bd">
+    <br />
+    <br />
+    可放自定义内容
+    <br />
+    <br />
+  </div>
+  <div class="app-half-screen-dialog__ft">
+    <div class="app-half-screen-dialog__btn-area">
+      <a href="javascript:" class="app-btn app-btn_default">辅助操作</a>
+      <a href="javascript:" class="app-btn app-btn_primary">主操作</a>
+    </div>
+    <div class="app-half-screen-dialog__attachment-area">
+      <a class="app-link" href="javacript:;">附加操作</a>
+    </div>
+  </div>
+</div>
+
+*/
+.app-half-screen-dialog {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-height: 75%;
+  z-index: 5000;
+  line-height: 1.4;
+  background-color: #fff;
+  background-color: var(--app-BG-2);
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  overflow: hidden;
+  padding: 0 24px;
+  padding: 0 calc(24px + constant(safe-area-inset-right))
+    constant(safe-area-inset-bottom) calc(24px + constant(safe-area-inset-left));
+  padding: 0 calc(24px + env(safe-area-inset-right)) env(safe-area-inset-bottom)
+    calc(24px + env(safe-area-inset-left));
+}
+
+@media only screen and (max-height: 558px) {
+  .app-half-screen-dialog {
+    max-height: none;
+  }
+}
+
+.app-half-screen-dialog__hd {
+  font-size: 8px;
+  height: 8em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.app-half-screen-dialog__hd .app-icon-btn {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.app-half-screen-dialog__hd .app-icon-btn:active {
+  opacity: 0.5;
+}
+
+.app-half-screen-dialog__hd__side {
+  position: relative;
+  left: -8px;
+}
+
+.app-half-screen-dialog__hd__main {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+.app-half-screen-dialog__hd__side + .app-half-screen-dialog__hd__main {
+  text-align: center;
+  padding: 0 40px;
+}
+
+.app-half-screen-dialog__hd__main + .app-half-screen-dialog__hd__side {
+  right: -8px;
+  left: auto;
+}
+
+.app-half-screen-dialog__hd__main
+  + .app-half-screen-dialog__hd__side
+  .app-icon-btn {
+  right: 0;
+}
+
+.app-half-screen-dialog__title {
+  display: block;
+  color: rgba(0, 0, 0, 0.9);
+  color: var(--app-FG-0);
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.app-half-screen-dialog__subtitle {
+  display: block;
+  color: rgba(0, 0, 0, 0.5);
+  color: var(--app-FG-1);
+  font-size: 10px;
+}
+
+.app-half-screen-dialog__bd {
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  overflow-y: auto;
+  padding-top: 4px;
+  padding-bottom: 56px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.9);
+  color: var(--app-FG-0);
+}
+
+.app-half-screen-dialog__desc {
+  font-size: 17px;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.9);
+  color: var(--app-FG-0);
+  line-height: 1.4;
+}
+
+.app-half-screen-dialog__tips {
+  padding-top: 16px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.3);
+  color: var(--app-FG-2);
+  line-height: 1.4;
+}
+
+.app-half-screen-dialog__ft {
+  padding: 0 0 64px;
+  text-align: center;
+}
+
+.app-half-screen-dialog__ft .app-btn:nth-last-child(n + 2),
+.app-half-screen-dialog__ft .app-btn:nth-last-child(n + 2) + .app-btn {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 8px;
+  width: 120px;
+}
+
+.app-half-screen-dialog__ft .app-btn:nth-last-child(n + 2):first-child,
+.app-half-screen-dialog__ft
+  .app-btn:nth-last-child(n + 2)
+  + .app-btn:first-child {
+  margin-left: 0;
+}
+
+.app-half-screen-dialog__ft .app-btn:nth-last-child(n + 2):last-child,
+.app-half-screen-dialog__ft
+  .app-btn:nth-last-child(n + 2)
+  + .app-btn:last-child {
+  margin-right: 0;
+}
+
+.app-half-screen-dialog__btn-area + .app-half-screen-dialog__attachment-area {
+  margin-top: 24px;
+  margin-bottom: -44px;
+}
