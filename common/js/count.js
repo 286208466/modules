@@ -1,3 +1,6 @@
+/*
+  eslint-disable
+*/
 //精确计算：加
 export function plus(arg1, arg2) {
   var r1, r2, m, c;
@@ -76,9 +79,9 @@ export function div(arg1, arg2) {
   try {
     t2 = arg2.toString().split(".")[1].length;
   } catch (e) {}
-  with (Math) {
-    r1 = Number(arg1.toString().replace(".", ""));
-    r2 = Number(arg2.toString().replace(".", ""));
-    return (r1 / r2) * pow(10, t2 - t1);
-  }
+  // with (Math) {
+  r1 = Number(arg1.toString().replace(".", ""));
+  r2 = Number(arg2.toString().replace(".", ""));
+  return (r1 / r2) * Math.pow(10, t2 - t1);
+  // }
 }

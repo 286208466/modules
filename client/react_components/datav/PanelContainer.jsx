@@ -7,7 +7,7 @@ import React, {
   forwardRef,
 } from "react";
 
-import { debounce } from "../../utils/debounce-throttle";
+import { debounce } from "../../js/debounce_throttle";
 
 let defaultStyle = {
   position: "absolute",
