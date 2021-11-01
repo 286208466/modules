@@ -1,0 +1,69 @@
+/*
+
+<div class="app-loadmore">
+  <span class="app-primary-loading">
+    <i class="app-primary-loading__dot"></i>
+  </span>
+  <span class="app-loadmore__tips">正在加载</span>
+</div>
+<div class="app-loadmore app-loadmore_line">
+  <span class="app-loadmore__tips">暂无数据</span>
+</div>
+<div class="app-loadmore app-loadmore_line app-loadmore_dot">
+  <span class="app-loadmore__tips"></span>
+</div>
+
+*/
+.app-loadmore {
+  width: 65%;
+  margin: 20px auto;
+  text-align: center;
+  font-size: 0;
+}
+
+.app-loadmore .app-loading,
+.app-loadmore .app-primary-loading {
+  margin-right: 8px;
+}
+
+.app-loadmore__tips {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(0, 0, 0, 0.9);
+  color: var(--app-FG-0);
+}
+
+.app-loadmore_line {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid var(--app-FG-3);
+  margin-top: 32px;
+}
+
+.app-loadmore_line .app-loadmore__tips {
+  position: relative;
+  top: -0.9em;
+  padding: 0 0.55em;
+  background-color: #fff;
+  background-color: var(--app-BG-2);
+  color: rgba(0, 0, 0, 0.5);
+  color: var(--app-FG-1);
+}
+
+.app-loadmore_dot .app-loadmore__tips {
+  padding: 0 0.16em;
+}
+
+.app-loadmore_dot .app-loadmore__tips:before {
+  content: " ";
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.1);
+  background-color: var(--app-FG-3);
+  display: inline-block;
+  position: relative;
+  vertical-align: 0;
+  top: -0.16em;
+}

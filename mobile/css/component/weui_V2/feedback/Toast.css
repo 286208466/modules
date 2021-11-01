@@ -1,0 +1,156 @@
+/*
+成功提示
+<div id="toast" style="opacity: 0; display: none">
+  <div class="app-mask_transparent"></div>
+  <div class="app-toast">
+    <i class="app-icon-success-no-circle app-icon_toast"></i>
+    <p class="app-toast__content">操作成功</p>
+  </div>
+</div>
+
+失败提示
+<div id="warnToast" style="opacity: 0; display: none">
+  <div class="app-mask_transparent"></div>
+  <div class="app-toast">
+    <i class="app-icon-warn app-icon_toast"></i>
+    <p class="app-toast__content">获取链接失败</p>
+  </div>
+</div>
+
+长文案提示
+<div id="textMoreToast" style="opacity: 0; display: none">
+  <div class="app-mask_transparent"></div>
+  <div class="app-toast app-toast_text-more">
+    <i class="app-icon-warn app-icon_toast"></i>
+    <p class="app-toast__content">此处为长文案提示详情</p>
+  </div>
+</div>
+
+加载中提示
+<div id="loadingToast" style="opacity: 0; display: none">
+  <div class="app-mask_transparent"></div>
+  <div class="app-toast">
+    <span class="app-primary-loading app-icon_toast">
+      <span class="app-primary-loading__dot"></span>
+    </span>
+    <p class="app-toast__content">加载中</p>
+  </div>
+</div>
+
+文字提示
+<div id="textToast" style="opacity: 0; display: none">
+  <div class="app-mask_transparent"></div>
+  <div class="app-toast app-toast_text">
+    <p class="app-toast__content">文字提示</p>
+  </div>
+</div>
+
+
+*/
+.app-toast {
+  position: fixed;
+  z-index: 5000;
+  width: 136px;
+  height: 136px;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  border-radius: 12px;
+  color: rgba(255, 255, 255, 0.9);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  background-color: #4c4c4c;
+  background-color: var(--app-BG-4);
+  box-sizing: border-box;
+  line-height: 1.4;
+
+  /* V1.0版本样式 */
+  /* width: 120px;
+  min-height: 120px;
+  background: rgba(17, 17, 17, 0.7);
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 16px;
+  text-align: center; */
+}
+
+.app-toast_text {
+  height: auto;
+  min-width: 152px;
+  max-width: 216px;
+  padding: 12px 0;
+}
+
+.app-toast_text .app-toast__content {
+  font-size: 14px;
+}
+
+.app-icon_toast {
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 16px;
+}
+
+.app-icon_toast.app-icon-success-no-circle {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.app-icon_toast.app-icon-warn {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.app-icon_toast.app-loading {
+  width: 36px;
+  height: 36px;
+}
+
+.app-icon_toast.app-primary-loading {
+  font-size: 40px;
+  color: #ededed;
+}
+
+.app-icon_toast.app-primary-loading:before {
+  border-width: 4px 0 4px 4px;
+}
+
+.app-icon_toast.app-primary-loading:after {
+  border-width: 4px 4px 4px 0;
+}
+
+.app-icon_toast.app-primary-loading .app-primary-loading__dot {
+  width: 4px;
+  height: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.app-toast__content {
+  font-size: 17px;
+  padding: 0 12px;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+.app-toast_text-more .app-icon_toast {
+  margin-bottom: 12px;
+}
+
+.app-toast_text-more .app-toast__content {
+  font-size: 14px;
+  line-height: 1.6;
+}

@@ -1,0 +1,78 @@
+
+/*
+gallery组件： 搭配上传组件使用
+使用添加删除class="show"控制显示隐藏
+=====================================================
+<div class="app-gallery">
+  <span
+    class="app-gallery__img"
+    style="background-image: url(./images/pic_article.png)"
+  ></span>
+  <div class="app-gallery__opr">
+    <a class="app-gallery__del">
+      <i class="app-icon-delete app-icon_gallery-delete"></i>
+    </a>
+  </div>
+</div>
+=====================================================
+*/
+.app-gallery {
+  display: none;
+  position: fixed;
+  /* overflow: hidden; */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  z-index: 1000;
+}
+
+.app-gallery.show {
+  display: block;
+}
+
+.app-gallery__img,
+.app-gallery__opr {
+  position: absolute;
+  left: 0;
+  left: constant(safe-area-inset-left);
+  left: env(safe-area-inset-left);
+  right: 0;
+  right: constant(safe-area-inset-right);
+  right: env(safe-area-inset-right);
+}
+
+.app-gallery__img {
+  top: 0;
+  top: constant(safe-area-inset-top);
+  top: env(safe-area-inset-top);
+  bottom: 60px;
+  bottom: calc(60px + constant(safe-area-inset-bottom));
+  bottom: calc(60px + env(safe-area-inset-bottom));
+  /* @V1.0版本样式 */
+  /* bottom: 44px; */
+  width: 100%;
+  background: center center no-repeat;
+  background-size: contain;
+}
+
+.app-gallery__opr {
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 0;
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+  background-color: #0d0d0d;
+  color: #fff;
+  color: var(--app-WHITE);
+  line-height: 60px;
+  text-align: center;
+  /* @V1.0版本样式 */
+  /* font-size: 16px; */
+}
+
+.app-gallery__del {
+  display: block;
+}
+

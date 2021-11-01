@@ -1,0 +1,335 @@
+/*
+<div class="app-panel app-panel_access">
+  <div class="app-panel__hd">图文组合列表</div>
+  <div class="app-panel__bd">
+    <a href="javascript:" class="app-media-box app-media-box_appmsg">
+      <div class="app-media-box__hd">
+        <img
+          class="app-media-box__thumb"
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAMAAAAOusbgAAAAeFBMVEUAwAD///+U5ZTc9twOww7G8MYwzDCH4YcfyR9x23Hw+/DY9dhm2WZG0kbT9NP0/PTL8sux7LFe115T1VM+zz7i+OIXxhes6qxr2mvA8MCe6J6M4oz6/frr+us5zjn2/fa67rqB4IF13XWn6ad83nxa1loqyirn+eccHxx4AAAC/klEQVRo3u2W2ZKiQBBF8wpCNSCyLwri7v//4bRIFVXoTBBB+DAReV5sG6lTXDITiGEYhmEYhmEYhmEYhmEY5v9i5fsZGRx9PyGDne8f6K9cfd+mKXe1yNG/0CcqYE86AkBMBh66f20deBc7wA/1WFiTwvSEpBMA2JJOBsSLxe/4QEEaJRrASP8EVF8Q74GbmevKg0saa0B8QbwBdjRyADYxIhqxAZ++IKYtciPXLQVG+imw+oo4Bu56rjEJ4GYsvPmKOAB+xlz7L5aevqUXuePWVhvWJ4eWiwUQ67mK51qPj4dFDMlRLBZTqF3SDvmr4BwtkECu5gHWPkmDfQh02WLxXuvbvC8ku8F57GsI5e0CmUwLz1kq3kD17R1In5816rGvQ5VMk5FEtIiWislTffuDpl/k/PzscdQsv8r9qWq4LRWX6tQYtTxvI3XyrwdyQxChXioOngH3dLgOFjk0all56XRi/wDFQrGQU3Os5t0wJu1GNtNKHdPqYaGYQuRDfbfDf26AGLYSyGS3ZAK4S8XuoAlxGSdYMKwqZKM9XJMtyqXi7HX/CiAZS6d8bSVUz5J36mEMFDTlAFQzxOT1dzLRljjB6+++ejFqka+mXIe6F59mw22OuOw1F4T6lg/9VjL1rLDoI9Xzl1MSYDNHnPQnt3D1EE7PrXjye/3pVpr1Z45hMUdcACc5NVQI0bOdS1WA0wuz73e7/5TNqBPhQXPEFGJNV2zNqWI7QKBd2Gn6AiBko02zuAOXeWIXjV0jNqdKegaE/kJQ6Bfs4aju04lMLkA2T5wBSYPKDGF3RKhFYEa6A1L1LG2yacmsaZ6YPOSAMKNsO+N5dNTfkc5Aqe26uxHpx7ZirvgCwJpWq/lmX1hA7LyabQ34tt5RiJKXSwQ+0KU0V5xg+hZrd4Bn1n4EID+WkQdgLfRNtvil9SPfwy+WQ7PFBWQz6dGWZBLkeJFXZGCfLUjCgGgqXo5TuSu3cugdcTv/HjqnBTEMwzAMwzAMwzAMwzAMw/zf/AFbXiOA6frlMAAAAABJRU5ErkJggg=="
+          alt=""
+        />
+      </div>
+      <div class="app-media-box__bd">
+        <h4 class="app-media-box__title">标题一</h4>
+        <p class="app-media-box__desc">
+          由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。
+        </p>
+      </div>
+    </a>
+    <a href="javascript:" class="app-media-box app-media-box_appmsg">
+      <div class="app-media-box__hd">
+        <img
+          class="app-media-box__thumb"
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAMAAAAOusbgAAAAeFBMVEUAwAD///+U5ZTc9twOww7G8MYwzDCH4YcfyR9x23Hw+/DY9dhm2WZG0kbT9NP0/PTL8sux7LFe115T1VM+zz7i+OIXxhes6qxr2mvA8MCe6J6M4oz6/frr+us5zjn2/fa67rqB4IF13XWn6ad83nxa1loqyirn+eccHxx4AAAC/klEQVRo3u2W2ZKiQBBF8wpCNSCyLwri7v//4bRIFVXoTBBB+DAReV5sG6lTXDITiGEYhmEYhmEYhmEYhmEY5v9i5fsZGRx9PyGDne8f6K9cfd+mKXe1yNG/0CcqYE86AkBMBh66f20deBc7wA/1WFiTwvSEpBMA2JJOBsSLxe/4QEEaJRrASP8EVF8Q74GbmevKg0saa0B8QbwBdjRyADYxIhqxAZ++IKYtciPXLQVG+imw+oo4Bu56rjEJ4GYsvPmKOAB+xlz7L5aevqUXuePWVhvWJ4eWiwUQ67mK51qPj4dFDMlRLBZTqF3SDvmr4BwtkECu5gHWPkmDfQh02WLxXuvbvC8ku8F57GsI5e0CmUwLz1kq3kD17R1In5816rGvQ5VMk5FEtIiWislTffuDpl/k/PzscdQsv8r9qWq4LRWX6tQYtTxvI3XyrwdyQxChXioOngH3dLgOFjk0all56XRi/wDFQrGQU3Os5t0wJu1GNtNKHdPqYaGYQuRDfbfDf26AGLYSyGS3ZAK4S8XuoAlxGSdYMKwqZKM9XJMtyqXi7HX/CiAZS6d8bSVUz5J36mEMFDTlAFQzxOT1dzLRljjB6+++ejFqka+mXIe6F59mw22OuOw1F4T6lg/9VjL1rLDoI9Xzl1MSYDNHnPQnt3D1EE7PrXjye/3pVpr1Z45hMUdcACc5NVQI0bOdS1WA0wuz73e7/5TNqBPhQXPEFGJNV2zNqWI7QKBd2Gn6AiBko02zuAOXeWIXjV0jNqdKegaE/kJQ6Bfs4aju04lMLkA2T5wBSYPKDGF3RKhFYEa6A1L1LG2yacmsaZ6YPOSAMKNsO+N5dNTfkc5Aqe26uxHpx7ZirvgCwJpWq/lmX1hA7LyabQ34tt5RiJKXSwQ+0KU0V5xg+hZrd4Bn1n4EID+WkQdgLfRNtvil9SPfwy+WQ7PFBWQz6dGWZBLkeJFXZGCfLUjCgGgqXo5TuSu3cugdcTv/HjqnBTEMwzAMwzAMwzAMwzAMw/zf/AFbXiOA6frlMAAAAABJRU5ErkJggg=="
+          alt=""
+        />
+      </div>
+      <div class="app-media-box__bd">
+        <h4 class="app-media-box__title">标题二</h4>
+        <p class="app-media-box__desc">
+          由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。
+        </p>
+      </div>
+    </a>
+  </div>
+  <div class="app-panel__ft">
+    <a
+      href="javascript:"
+      class="app-cell app-cell_active app-cell_access app-cell_link"
+    >
+      <div class="app-cell__bd">查看更多</div>
+      <span class="app-cell__ft"></span>
+    </a>
+  </div>
+</div>
+<div class="app-panel app-panel_access">
+  <div class="app-panel__hd">文字组合列表</div>
+  <div class="app-panel__bd">
+    <div class="app-media-box app-media-box_text">
+      <h4 class="app-media-box__title">标题一</h4>
+      <p class="app-media-box__desc">
+        由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。
+      </p>
+    </div>
+    <div class="app-media-box app-media-box_text">
+      <h4 class="app-media-box__title">标题二</h4>
+      <p class="app-media-box__desc">
+        由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。
+      </p>
+    </div>
+  </div>
+  <div class="app-panel__ft">
+    <a
+      href="javascript:"
+      class="app-cell app-cell_active app-cell_access app-cell_link"
+    >
+      <div class="app-cell__bd">查看更多</div>
+      <span class="app-cell__ft"></span>
+    </a>
+  </div>
+</div>
+<div class="app-panel">
+  <div class="app-panel__hd">小图文组合列表</div>
+  <div class="app-panel__bd">
+    <div class="app-media-box app-media-box_small-appmsg">
+      <div class="app-cells">
+        <a
+          class="app-cell app-cell_active app-cell_access app-cell_example"
+          href="javascript:"
+        >
+          <div class="app-cell__hd">
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII="
+              alt=""
+            />
+          </div>
+          <div class="app-cell__bd app-cell_primary">
+            <p>文字标题</p>
+          </div>
+          <span class="app-cell__ft"></span>
+        </a>
+        <a
+          class="app-cell app-cell_active app-cell_access app-cell_example"
+          href="javascript:"
+        >
+          <div class="app-cell__hd">
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII="
+              alt=""
+            />
+          </div>
+          <div class="app-cell__bd app-cell_primary">
+            <p>文字标题</p>
+          </div>
+          <span class="app-cell__ft"></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="app-panel">
+  <div class="app-panel__hd">文字列表附来源</div>
+  <div class="app-panel__bd">
+    <div class="app-media-box app-media-box_text">
+      <h4 class="app-media-box__title">标题一</h4>
+      <p class="app-media-box__desc">
+        由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。
+      </p>
+      <ul class="app-media-box__info">
+        <li class="app-media-box__info__meta">文字来源</li>
+        <li class="app-media-box__info__meta">时间</li>
+        <li class="app-media-box__info__meta app-media-box__info__meta_extra">
+          其它信息
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+*/
+
+.app-panel {
+  background-color: #fff;
+  background-color: var(--app-BG-2);
+  margin-top: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.app-panel:first-child {
+  margin-top: 0;
+}
+
+.app-panel:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 1px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid var(--app-FG-3);
+  color: rgba(0, 0, 0, 0.1);
+  color: var(--app-FG-3);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+
+.app-panel:after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 1px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid var(--app-FG-3);
+  color: rgba(0, 0, 0, 0.1);
+  color: var(--app-FG-3);
+  -webkit-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+
+.app-panel__hd {
+  padding: 16px 16px 13px;
+  color: rgba(0, 0, 0, 0.9);
+  color: var(--app-FG-0);
+  font-size: 15px;
+  font-weight: 700;
+  position: relative;
+}
+
+.app-panel__hd:after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 1px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid var(--app-FG-3);
+  color: rgba(0, 0, 0, 0.1);
+  color: var(--app-FG-3);
+  -webkit-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  left: 15px;
+}
+
+.app-media-box {
+  padding: 16px;
+  position: relative;
+}
+
+.app-media-box:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 1px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid var(--app-FG-3);
+  color: rgba(0, 0, 0, 0.1);
+  color: var(--app-FG-3);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  left: 16px;
+}
+
+.app-media-box:first-child:before {
+  display: none;
+}
+
+a.app-media-box {
+  color: #000;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+a.app-media-box:active {
+  background-color: #ececec;
+  background-color: var(--app-BG-COLOR-ACTIVE);
+}
+
+.app-media-box__title {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.4;
+  color: rgba(0, 0, 0, 0.9);
+  color: var(--app-FG-0);
+  width: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+.app-media-box__desc {
+  color: rgba(0, 0, 0, 0.3);
+  color: var(--app-FG-2);
+  font-size: 14px;
+  line-height: 1.4;
+  padding-top: 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+.app-media-box__info {
+  margin-top: 16px;
+  padding-bottom: 4px;
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.3);
+  color: var(--app-FG-2);
+  line-height: 1em;
+  list-style: none;
+  overflow: hidden;
+}
+
+.app-media-box__info__meta {
+  float: left;
+  padding-right: 1em;
+}
+
+.app-media-box__info__meta_extra {
+  padding-left: 1em;
+  border-left: 1px solid rgba(0, 0, 0, 0.3);
+  border-left: 1px solid var(--app-FG-2);
+}
+
+.app-media-box_appmsg {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.app-media-box_appmsg .app-media-box__hd {
+  margin-right: 16px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+}
+
+.app-media-box_appmsg .app-media-box__thumb {
+  width: 100%;
+  max-height: 100%;
+  vertical-align: top;
+}
+
+.app-media-box_appmsg .app-media-box__bd {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  min-width: 0;
+}
+
+.app-media-box_small-appmsg {
+  padding: 0;
+}
+
+.app-media-box_small-appmsg .app-cells {
+  margin-top: 0;
+}
+
+.app-media-box_small-appmsg .app-cells:before {
+  display: none;
+}

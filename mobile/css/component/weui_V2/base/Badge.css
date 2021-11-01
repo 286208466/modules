@@ -1,0 +1,71 @@
+.app-badge {
+  display: inline-block;
+  padding: 0.15em 0.4em;
+  min-width: 8px;
+  border-radius: 18px;
+  background-color: #f43530;
+  background-color: #fa5151;
+  background-color: var(--app-RED);
+  color: #fff;
+  line-height: 1.2;
+  text-align: center;
+  font-size: 12px;
+  vertical-align: middle;
+}
+
+.app-badge_dot {
+  padding: 0.4em;
+  min-width: 0;
+}
+/*
+
+<span class="app-badge">New</span>
+<span class="app-badge app-badge_dot"></span>
+
+
+<div class="app-cells__title">新消息提示跟摘要信息后，统一在列表右侧</div>
+<div class="app-cells">
+  <div class="app-cell app-cell_active app-cell_access">
+    <div class="app-cell__bd">单行列表</div>
+    <div class="app-cell__ft" style="font-size: 0">
+      <span class="demo_badge_tips">详细信息</span>
+      <span class="app-badge app-badge_dot"></span>
+    </div>
+  </div>
+</div>
+
+<div class="app-cells__title">未读数红点跟在主题信息后，统一在列表左侧</div>
+<div class="app-cells demo_badge_cells">
+  <div class="app-cell app-cell_active">
+    <div class="app-cell__hd">
+      <img src="images/pic_160.png" />
+      <span class="app-badge">8</span>
+    </div>
+    <div class="app-cell__bd">
+      <p>联系人名称</p>
+      <p class="demo_badge_desc">摘要信息</p>
+    </div>
+  </div>
+  <div class="app-cell app-cell_active app-cell_access">
+    <div class="app-cell__bd">
+      <span class="demo_badge_title">单行列表</span>
+      <span class="app-badge">8</span>
+    </div>
+    <div class="app-cell__ft"></div>
+  </div>
+  <div class="app-cell app-cell_active app-cell_access">
+    <div class="app-cell__bd">
+      <span class="demo_badge_title">单行列表</span>
+      <span class="app-badge">8</span>
+    </div>
+    <div class="app-cell__ft">详细信息</div>
+  </div>
+  <div class="app-cell app-cell_active app-cell_access">
+    <div class="app-cell__bd">
+      <span class="demo_badge_title">单行列表</span>
+      <span class="app-badge">New</span>
+    </div>
+    <div class="app-cell__ft"></div>
+  </div>
+</div>
+*/

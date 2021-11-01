@@ -1,0 +1,277 @@
+/*
+
+<div class="button-sp-area">
+  <a class="app-btn app-btn_primary">页面主操作</a>
+  <a class="app-btn app-btn_primary app-btn_loading"
+    ><span class="app-primary-loading app-primary-loading_transparent"
+      ><i class="app-primary-loading__dot"></i></span
+    >页面主操作</a
+  >
+  <a class="app-btn app-btn_disabled app-btn_primary">页面主操作</a>
+  <a class="app-btn app-btn_default">页面次要操作</a>
+  <a class="app-btn app-btn_default app-btn_loading"
+    ><span class="app-primary-loading"
+      ><i class="app-primary-loading__dot"></i></span
+    >页面次操作</a
+  >
+  <a class="app-btn app-btn_disabled app-btn_default">页面次要操作</a>
+  <a class="app-btn app-btn_warn">警告类操作</a>
+  <a class="app-btn app-btn_warn app-btn_loading"
+    ><span class="app-primary-loading"
+      ><i class="app-primary-loading__dot"></i></span
+    >警告类操作</a
+  >
+  <a class="app-btn app-btn_disabled app-btn_warn">警告类操作</a>
+</div>
+
+<div class="button-sp-area cell">
+  <a class="app-btn_cell app-btn_cell-default">普通行按钮</a>
+  <a class="app-btn_cell app-btn_cell-primary">强调行按钮</a>
+  <a class="app-btn_cell app-btn_cell-primary">
+    <img
+      class="app-btn_cell__icon"
+      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII="
+    />
+    强调行按钮
+  </a>
+  <a class="app-btn_cell app-btn_cell-warn">警告行按钮</a>
+</div>
+<div class="button-sp-area">
+  <a class="app-btn app-btn_mini app-btn_primary">按钮</a>
+  <a class="app-btn app-btn_mini app-btn_default">按钮</a>
+  <a class="app-btn app-btn_mini app-btn_warn">按钮</a>
+</div>
+
+*/
+.app-btn {
+  position: relative;
+  display: block;
+  width: 184px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 8px 24px;
+  box-sizing: border-box;
+  font-weight: 700;
+  font-size: 17px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  line-height: 1.41176471;
+  border-radius: 4px;
+  overflow: hidden;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.app-btn_block {
+  width: auto;
+}
+
+.app-btn_inline {
+  display: inline-block;
+}
+
+.app-btn_default {
+  color: #06ae56;
+  color: var(--app-BTN-DEFAULT-COLOR);
+  background-color: #f2f2f2;
+  background-color: var(--app-BTN-DEFAULT-BG);
+}
+
+.app-btn_default:not(.app-btn_disabled):visited {
+  color: #06ae56;
+  color: var(--app-BTN-DEFAULT-COLOR);
+}
+
+.app-btn_default:not(.app-btn_disabled):active {
+  background-color: #e6e6e6;
+  background-color: var(--app-BTN-DEFAULT-ACTIVE-BG);
+}
+
+.app-btn_primary {
+  background-color: #07c160;
+  background-color: var(--app-BRAND);
+}
+
+.app-btn_primary:not(.app-btn_disabled):visited {
+  color: #fff;
+}
+
+.app-btn_primary:not(.app-btn_disabled):active {
+  background-color: #06ae56;
+  background-color: var(--app-TAG-TEXT-GREEN);
+}
+
+.app-btn_warn {
+  color: #fa5151;
+  color: var(--app-RED);
+  background-color: #f2f2f2;
+  background-color: var(--app-BTN-DEFAULT-BG);
+}
+
+.app-btn_warn:not(.app-btn_disabled):visited {
+  color: #fa5151;
+  color: var(--app-RED);
+}
+
+.app-btn_warn:not(.app-btn_disabled):active {
+  background-color: #e6e6e6;
+  background-color: var(--app-BTN-DEFAULT-ACTIVE-BG);
+}
+
+.app-btn_disabled {
+  color: rgba(0, 0, 0, 0.2);
+  color: var(--app-BTN-DISABLED-FONT-COLOR);
+  background-color: #f2f2f2;
+  background-color: var(--app-BTN-DEFAULT-BG);
+}
+
+.app-btn_loading .app-loading {
+  margin: -0.2em 0.34em 0 0;
+}
+
+.app-btn_loading .app-primary-loading {
+  margin: -0.2em 8px 0 0;
+  vertical-align: middle;
+}
+
+.app-btn_loading.app-btn_primary {
+  background-color: #06ae56;
+  background-color: var(--app-TAG-TEXT-GREEN);
+  color: #fff;
+  color: var(--app-WHITE);
+}
+
+.app-btn_loading.app-btn_default {
+  background-color: #e6e6e6;
+  background-color: var(--app-BTN-DEFAULT-ACTIVE-BG);
+}
+
+.app-btn_loading.app-btn_warn {
+  background-color: #e6e6e6;
+  background-color: var(--app-BTN-DEFAULT-ACTIVE-BG);
+}
+
+.app-btn_cell {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  font-size: 17px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  line-height: 1.41176471;
+  padding: 16px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  overflow: hidden;
+  background-color: #fff;
+  background-color: var(--app-BG-5);
+}
+
+.app-btn_cell + .app-btn_cell {
+  margin-top: 16px;
+}
+
+.app-btn_cell:active {
+  background-color: #ececec;
+  background-color: var(--app-BG-COLOR-ACTIVE);
+}
+
+.app-btn_cell__icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 24px;
+  height: 24px;
+  margin: -0.2em 0.34em 0 0;
+}
+
+.app-btn_cell-default {
+  color: rgba(0, 0, 0, 0.9);
+  color: var(--app-FG-0);
+}
+
+.app-btn_cell-primary {
+  color: #576b95;
+  color: var(--app-LINK);
+}
+
+.app-btn_cell-warn {
+  color: #fa5151;
+  color: var(--app-RED);
+}
+
+button.app-btn,
+input.app-btn {
+  border-width: 0;
+  outline: 0;
+  -webkit-appearance: none;
+}
+
+button.app-btn:focus,
+input.app-btn:focus {
+  outline: 0;
+}
+
+button.app-btn_inline,
+input.app-btn_inline,
+button.app-btn_mini,
+input.app-btn_mini {
+  width: auto;
+}
+
+.app-btn_mini {
+  display: inline-block;
+  width: auto;
+  padding: 0 0.75em;
+  line-height: 2;
+  font-size: 16px;
+}
+
+.app-btn:not(.app-btn_mini) + .app-btn:not(.app-btn_mini) {
+  margin-top: 16px;
+}
+
+.app-btn.app-btn_inline + .app-btn.app-btn_inline {
+  margin-top: auto;
+  margin-left: 16px;
+}
+
+.app-btn-area {
+  margin: 48px 16px 8px;
+}
+
+.app-btn-area_inline {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.app-btn-area_inline .app-btn {
+  margin-top: auto;
+  margin-right: 16px;
+  width: 100%;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+.app-btn-area_inline .app-btn:last-child {
+  margin-right: 0;
+}
+
+.app-btn_reset {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  outline: 0;
+}
+
+.app-btn_icon {
+  font-size: 0;
+}
+
+.app-btn_icon:active [class*="app-icon-"] {
+  color: rgba(0, 0, 0, 0.5);
+  color: var(--app-FG-1);
+}

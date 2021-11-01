@@ -1,0 +1,233 @@
+/*
+
+IOS  ActionSheet
+
+<div class="app-mask" id="iosMask" style="opacity: 1"></div>
+<div class="app-actionsheet app-actionsheet_toggle" id="iosActionsheet">
+  <div class="app-actionsheet__title">
+    <p class="app-actionsheet__title-text">
+      这是一个标题，可以为一行或者两行。
+    </p>
+  </div>
+  <div class="app-actionsheet__menu">
+    <div class="app-actionsheet__cell">示例菜单</div>
+    <div class="app-actionsheet__cell">示例菜单</div>
+    <div class="app-actionsheet__cell app-actionsheet__cell_warn">
+      负向菜单
+    </div>
+  </div>
+  <div class="app-actionsheet__action">
+    <div class="app-actionsheet__cell" id="iosActionsheetCancel">取消</div>
+  </div>
+</div>
+
+
+安卓ActionSheet
+<div class="app-skin_android" id="androidActionsheet" style="opacity: 1">
+  <div class="app-mask"></div>
+  <div class="app-actionsheet">
+    <div class="app-actionsheet__menu">
+      <div class="app-actionsheet__cell">示例菜单</div>
+      <div class="app-actionsheet__cell">示例菜单</div>
+      <div class="app-actionsheet__cell">示例菜单</div>
+    </div>
+  </div>
+</div>
+
+
+*/
+.app-actionsheet {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  -webkit-transform: translate(0, 100%);
+  transform: translate(0, 100%);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 5000;
+  width: 100%;
+  background-color: #f7f7f7;
+  background-color: var(--app-BG-1);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  overflow: hidden;
+}
+
+.app-actionsheet__title {
+  position: relative;
+  height: 56px;
+  padding: 0 24px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.5);
+  color: var(--app-FG-1);
+  line-height: 1.4;
+  background: #fff;
+  background: var(--app-BG-2);
+}
+
+.app-actionsheet__title:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 1px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid var(--app-FG-3);
+  color: rgba(0, 0, 0, 0.1);
+  color: var(--app-FG-3);
+  -webkit-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+
+.app-actionsheet__title .app-actionsheet__title-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.app-actionsheet__menu {
+  color: rgba(0, 0, 0, 0.9);
+  color: var(--app-FG-0);
+  background-color: #fff;
+  background-color: var(--app-BG-2);
+}
+
+.app-actionsheet__action {
+  margin-top: 8px;
+  color: rgba(0, 0, 0, 0.9);
+  color: var(--app-FG-0);
+  background-color: #fff;
+  background-color: var(--app-BG-2);
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.app-actionsheet__cell {
+  position: relative;
+  padding: 16px;
+  text-align: center;
+  font-size: 17px;
+  line-height: 1.41176471;
+}
+
+.app-actionsheet__cell:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 1px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid var(--app-FG-3);
+  color: rgba(0, 0, 0, 0.1);
+  color: var(--app-FG-3);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+
+.app-actionsheet__cell:active {
+  background-color: #ececec;
+  background-color: var(--app-BG-COLOR-ACTIVE);
+}
+
+.app-actionsheet__cell:first-child:before {
+  display: none;
+}
+
+.app-actionsheet__cell_warn {
+  color: #fa5151;
+  color: var(--app-RED);
+}
+
+.app-skin_android .app-actionsheet {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  bottom: auto;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 274px;
+  box-sizing: border-box;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  background: transparent;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.app-skin_android .app-actionsheet__action {
+  display: none;
+}
+
+.app-skin_android .app-actionsheet__menu {
+  border-radius: 2px;
+  box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.1);
+}
+
+.app-skin_android .app-actionsheet__cell {
+  padding: 16px;
+  font-size: 17px;
+  line-height: 1.41176471;
+  color: rgba(0, 0, 0, 0.9);
+  color: var(--app-FG-0);
+  text-align: left;
+}
+
+.app-skin_android .app-actionsheet__cell:first-child {
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+
+.app-skin_android .app-actionsheet__cell:last-child {
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.app-actionsheet_toggle {
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+.app-mask {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.app-mask_transparent {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}

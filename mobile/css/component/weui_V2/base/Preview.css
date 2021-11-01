@@ -1,0 +1,306 @@
+/*
+
+<div class="app-form-preview">
+  <div class="app-form-preview__hd">
+    <div class="app-form-preview__item">
+      <label class="app-form-preview__label">付款金额</label>
+      <em class="app-form-preview__value">¥2400.00</em>
+    </div>
+  </div>
+  <div class="app-form-preview__bd">
+    <div class="app-form-preview__item">
+      <label class="app-form-preview__label">商品</label>
+      <span class="app-form-preview__value">电动打蛋机</span>
+    </div>
+    <div class="app-form-preview__item">
+      <label class="app-form-preview__label">标题标题</label>
+      <span class="app-form-preview__value">名字名字名字</span>
+    </div>
+    <div class="app-form-preview__item">
+      <label class="app-form-preview__label">标题标题</label>
+      <span class="app-form-preview__value"
+        >很长很长的名字很长很长的名字很长很长的名字很长很长的名字很长很长的名字</span
+      >
+    </div>
+  </div>
+  <div class="app-form-preview__ft">
+    <a
+      class="app-form-preview__btn app-form-preview__btn_primary"
+      href="javascript:"
+      >操作</a
+    >
+  </div>
+</div>
+<br />
+<div class="app-form-preview">
+  <div class="app-form-preview__hd">
+    <label class="app-form-preview__label">付款金额</label>
+    <em class="app-form-preview__value">¥2400.00</em>
+  </div>
+  <div class="app-form-preview__bd">
+    <div class="app-form-preview__item">
+      <label class="app-form-preview__label">商品</label>
+      <span class="app-form-preview__value">电动打蛋机</span>
+    </div>
+    <div class="app-form-preview__item">
+      <label class="app-form-preview__label">标题标题</label>
+      <span class="app-form-preview__value">名字名字名字</span>
+    </div>
+    <div class="app-form-preview__item">
+      <label class="app-form-preview__label">标题标题</label>
+      <span class="app-form-preview__value"
+        >很长很长的名字很长很长的名字很长很长的名字很长很长的名字很长很长的名字</span
+      >
+    </div>
+  </div>
+  <div class="app-form-preview__ft">
+    <a
+      class="app-form-preview__btn app-form-preview__btn_default"
+      href="javascript:"
+      >辅助操作</a
+    >
+    <a
+      class="app-form-preview__btn app-form-preview__btn_primary"
+      href="javascript:"
+      >操作</a
+    >
+  </div>
+</div>
+
+*/
+
+.app-form-preview {
+  position: relative;
+  background-color: #fff;
+  background-color: var(--app-BG-2);
+}
+
+.app-form-preview:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 1px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid var(--app-FG-3);
+  color: rgba(0, 0, 0, 0.1);
+  color: var(--app-FG-3);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+
+.app-form-preview:after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 1px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid var(--app-FG-3);
+  color: rgba(0, 0, 0, 0.1);
+  color: var(--app-FG-3);
+  -webkit-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+
+.app-form-preview__hd {
+  position: relative;
+  padding: 16px;
+  text-align: right;
+  line-height: 2.5em;
+}
+
+.app-form-preview__hd:after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 1px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid var(--app-FG-3);
+  color: rgba(0, 0, 0, 0.1);
+  color: var(--app-FG-3);
+  -webkit-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  left: 16px;
+}
+
+.app-form-preview__hd .app-form-preview__value {
+  font-style: normal;
+  font-size: 1.6em;
+}
+
+.app-form-preview__bd {
+  padding: 16px;
+  font-size: 0.9em;
+  text-align: right;
+  color: rgba(0, 0, 0, 0.5);
+  color: var(--app-FG-1);
+  line-height: 2;
+}
+
+.app-form-preview__ft {
+  position: relative;
+  line-height: 50px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.app-form-preview__ft:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 1px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid var(--app-DIALOG-LINE-COLOR);
+  color: rgba(0, 0, 0, 0.1);
+  color: var(--app-DIALOG-LINE-COLOR);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+
+.app-form-preview__item {
+  overflow: hidden;
+}
+
+.app-form-preview__label {
+  float: left;
+  margin-right: 1em;
+  min-width: 4em;
+  color: rgba(0, 0, 0, 0.5);
+  color: var(--app-FG-1);
+  text-align: justify;
+  text-align-last: justify;
+}
+
+.app-form-preview__value {
+  display: block;
+  overflow: hidden;
+  word-break: normal;
+  word-wrap: break-word;
+  color: rgba(0, 0, 0, 0.9);
+  color: var(--app-FG-0);
+}
+
+.app-form-preview__btn {
+  position: relative;
+  display: block;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  color: #576b95;
+  color: var(--app-LINK);
+  text-align: center;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+button.app-form-preview__btn {
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  line-height: inherit;
+  font-size: inherit;
+}
+
+.app-form-preview__btn:active {
+  background-color: #ececec;
+  background-color: var(--app-BG-COLOR-ACTIVE);
+}
+
+.app-form-preview__btn:after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  bottom: 0;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  border-left: 1px solid var(--app-DIALOG-LINE-COLOR);
+  color: rgba(0, 0, 0, 0.1);
+  color: var(--app-DIALOG-LINE-COLOR);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleX(0.5);
+  transform: scaleX(0.5);
+}
+
+.app-form-preview__btn:first-child:after {
+  display: none;
+}
+
+.app-form-preview__btn_default {
+  color: rgba(0, 0, 0, 0.9);
+  color: var(--app-FG-HALF);
+}
+
+.app-form-preview__btn_primary {
+  color: #576b95;
+  color: var(--app-LINK);
+}
+
+.app-form-preview__list {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  line-height: 1.4;
+  font-size: 14px;
+  position: relative;
+}
+
+.app-form-preview__list:before {
+  content: "";
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 1px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid var(--app-FG-3);
+  color: rgba(0, 0, 0, 0.1);
+  color: var(--app-FG-3);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+
+.app-form-preview__list:last-child {
+  padding-bottom: 0;
+}
+
+.app-form-preview__list .app-form-preview__label {
+  text-align: left;
+  text-align-last: unset;
+  width: 6em;
+}
+
+.app-form-preview__list .app-form-preview__value {
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+.app-form-preview__list .app-form-preview__item {
+  margin-top: 12px;
+}
+
+.app-form-preview__list .app-form-preview__item:first-child {
+  margin-top: 0;
+}
+
+.app-form-preview__list > .app-cells__title:first-child {
+  margin-top: 0;
+}
