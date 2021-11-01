@@ -1,13 +1,11 @@
-.app-header {
-  height: 45px;
+.app-header2 {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
 }
 
-.app-footer {
-  height: 50px;
+.app-footer2 {
   position: fixed;
   bottom: 0;
   left: 0;

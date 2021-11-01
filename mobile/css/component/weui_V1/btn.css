@@ -238,15 +238,4 @@ input.btn_plain-default {
   margin-right: 0;
 }
 
-.app-btn[color="green"] {
-  background-color: #1aad19;
-  color: #fff;
-}
-.app-btn[color="red"] {
-  background-color: #e64340;
-  color: #fff;
-}
-.app-btn[color="yellow"] {
-  background-color: #f08713;
-  color: #fff;
-}
+
